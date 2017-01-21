@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-public class Jump : MonoBehaviour
+public class PlayerJump : MonoBehaviour
 {
 	public Vector3 Force = new Vector3(0f, 1f, 0f);
 	public string Button = "Jump";
