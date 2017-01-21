@@ -42,11 +42,9 @@ public class WavesSpawner : MonoBehaviour {
 	void Update () {
 
         timeLeft -= Time.deltaTime;
-        Debug.Log(timeLeft);
         if (timeLeft < 0)
         {
             Spawn(currentWaveDef);
-            Debug.Log("I have finished counting down");
             SetCurrentWaveDef();
         }
     }
@@ -66,15 +64,26 @@ public class WavesSpawner : MonoBehaviour {
             }
             foreach (SpawnInstruction spawnInstruction in waveDef.content)
             {
-                Object foundObject = Resources.Load(spawnInstruction.objectToSpawn);
+                
+                if (spawnInstruction.operation == null)
+                {
+                    GameObject foundObject = Resources.Load(spawnInstruction.objectToSpawn) as GameObject;
+                    GameObject targetObject = Instantiate(foundObject, spawnPoints[spawnInstruction.spawnPoint].transform.position, new Quaternion());
 
-                GameObject targetObject = Instantiate(foundObject as GameObject, spawnPoints[spawnInstruction.spawnPoint].transform.position, new Quaternion());
+                    currentSpawns.Add(targetObject);
+                }
+                else
+                {
+                    if (spawnInstruction.operation == "Shoot")
+                    {
+                        GameObject foundObject = Resources.Load("Shooter") as GameObject;
+                        GameObject targetObject = Instantiate(foundObject, spawnPoints[spawnInstruction.spawnPoint].transform.position, new Quaternion());
+                        targetObject.GetComponent<BalisticShooter>().SetInstruction(spawnInstruction);
 
-                currentSpawns.Add(targetObject);
+                        currentSpawns.Add(targetObject);
+                    }
+                }
             }
-
         }
-     
     }
-
 }

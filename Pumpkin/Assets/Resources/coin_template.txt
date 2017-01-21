@@ -1,0 +1,4 @@
+ {
+	"spawnPoint": "SpawnPoint1",
+	"objectToSpawn": "Pickup"
+  }
