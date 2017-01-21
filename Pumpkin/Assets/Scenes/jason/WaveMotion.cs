@@ -12,6 +12,7 @@ public class WaveMotion : MonoBehaviour
 	private void Start()
 	{
 		StartPosition = transform.position;
+		_Timer = Duration;
 	}
 
 	private void Update()
@@ -36,5 +37,13 @@ public class WaveMotion : MonoBehaviour
 	public void Trigger()
 	{
 		_Timer = 0f;
+	}
+
+	public bool IsPlaying
+	{
+		get
+		{
+			return _Timer < Duration;
+		}
 	}
 }
