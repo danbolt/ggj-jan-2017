@@ -15,11 +15,10 @@ public class GuiManager : MonoBehaviour
 	#region Static Fields and Constants
 
 	/// <summary>The gui system path.</summary>
-	private const string GuiSystemPath = "Prefabs/Gui/";
+	private const string GuiSystemPath = "Prefabs/UI/";
 
 	private static GuiManager instance;
 
-	private static List<string> guiSupportedLanguages = new List<string> { "English", "French", "German", "Italian", "Spanish" };
 
 	#endregion
 
@@ -41,20 +40,11 @@ public class GuiManager : MonoBehaviour
 	[SerializeField]
 	private bool skipToGameplay = false;
 
-	[SerializeField]
-	private MinigameType startingMiniGame = MinigameType.Hardness;
-
 	private bool tutorialRun;
 
 	#endregion
 
 	#region Enums
-	private enum MinigameType 
-	{
-		Hardness,
-		Resonance,
-		Sharpness
-	}
 
 	private enum GuiStateEvents
 	{
@@ -66,17 +56,6 @@ public class GuiManager : MonoBehaviour
 
 		/// <summary>The resume gameplay.</summary>
 		ResumeGameplay, 
-
-		/// <summary>Triggers the menu to Hardness Minigame Transition</summary>
-		StartHardnessMiniGame, 
-
-		/// <summary>Triggers the menu to Hardness Minigame Transition</summary>
-		StartResonanceMiniGame, 
-
-		/// <summary>Triggers the menu to Hardness Minigame Transition</summary>
-		StartSharpnessMiniGame, 
-
-		MinigameComplete,
 
 		/// <summary>The pause gameplay.</summary>
 		PauseGameplay, 
@@ -287,14 +266,6 @@ public class GuiManager : MonoBehaviour
 		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
 	}
 
-	/// <summary>
-	/// Trigger the game to be completed.
-	/// </summary>
-	public void MiniGameComplete()
-	{
-		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.MinigameComplete);
-	}
-
 	public void ShowCredits()
 	{
 		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
@@ -320,17 +291,7 @@ public class GuiManager : MonoBehaviour
 
 	private void Start()
 	{
-		// @TODO [ImLp 2016-07-19] Re-Enable when localization is supported.
-		// string systemlanguage = Application.systemLanguage.ToString();
-		// if (guiSupportedLanguages.Contains(systemlanguage))
-		// {
-		// 	Localization.language = systemlanguage;
-		// }
-		// else
-		// {
 		Localization.language = "English";
-
-		// }
 		this.SetupStateMachine();
 	}
 
@@ -357,11 +318,6 @@ public class GuiManager : MonoBehaviour
 		this.mainGuiStateMachine.AddState(GuiStates.Settings, this.Settings_OnEnter, null, this.Settings_OnExit);
 		this.mainGuiStateMachine.AddState(GuiStates.StartingGameplay, this.StartingGameplay_OnEnter, null, null);
 
-		// TODO [ImLp 2016-08-27] hook up the update loops on enter and exit stuff.
-		this.mainGuiStateMachine.AddState(GuiStates.HardnessMinigame, this.HardnessMinigame_OnEnter, null, null);
-		this.mainGuiStateMachine.AddState(GuiStates.ResonanceMinigame, this.ResonanceMinigame_OnEnter, null, null);
-		this.mainGuiStateMachine.AddState(GuiStates.SharpnessMinigame, this.SharpnessMinigame_OnEnter, null, null);
-
 		// Initialization state transitions
 		this.mainGuiStateMachine.AddTransition(GuiStates.Uninitialized, GuiStates.Initialized, null, null, null, null, GuiStateEvents.InitializedGui);
 		this.mainGuiStateMachine.AddTransition(GuiStates.Initialized, GuiStates.MainMenu, null, null, null, null, GuiStateEvents.DisplayMainMenu);
@@ -386,39 +342,11 @@ public class GuiManager : MonoBehaviour
 		this.mainGuiStateMachine.AddTransition(GuiStates.Settings, GuiStates.GameplayPaused, null, null, null, null, GuiStateEvents.DismissPauseSettingsPopup);
 		this.mainGuiStateMachine.AddTransition(GuiStates.GameplayPostGame, GuiStates.StartingGameplay, null, null, null, null, GuiStateEvents.EnterGameplay);
 
-		// Gameplay Minigame Transitions.
-		this.mainGuiStateMachine.AddTransition(GuiStates.StartingGameplay, GuiStates.HardnessMinigame, null, null, null, null, GuiStateEvents.StartHardnessMiniGame);
-		this.mainGuiStateMachine.AddTransition(GuiStates.HardnessMinigame, GuiStates.ResonanceMinigame, null, null, null, null, GuiStateEvents.MinigameComplete);
-		this.mainGuiStateMachine.AddTransition(GuiStates.HardnessMinigame, GuiStates.GameplayPaused, null, null, null, null, GuiStateEvents.PauseGameplay);
-
-		this.mainGuiStateMachine.AddTransition(GuiStates.ResonanceMinigame, GuiStates.SharpnessMinigame, null, null, null, null, GuiStateEvents.MinigameComplete);
-		this.mainGuiStateMachine.AddTransition(GuiStates.ResonanceMinigame, GuiStates.GameplayPaused, null, null, null, null, GuiStateEvents.PauseGameplay);
-
-		this.mainGuiStateMachine.AddTransition(GuiStates.SharpnessMinigame, GuiStates.GameplayHighScore, null, null, null, null, GuiStateEvents.MinigameComplete);
-		this.mainGuiStateMachine.AddTransition(GuiStates.SharpnessMinigame, GuiStates.GameplayPaused, null, null, null, null, GuiStateEvents.PauseGameplay);
 
 		// Add a state that allows us to skip to gameplay after initialization
 		this.mainGuiStateMachine.AddTransition(GuiStates.Initialized, GuiStates.StartingGameplay, null, null, null, null, GuiStateEvents.SkipToGameplay);
-		this.mainGuiStateMachine.AddTransition(GuiStates.Initialized, GuiStates.HardnessMinigame, null, null, null, null, GuiStateEvents.StartHardnessMiniGame);
-		this.mainGuiStateMachine.AddTransition(GuiStates.Initialized, GuiStates.SharpnessMinigame, null, null, null, null, GuiStateEvents.StartSharpnessMiniGame);
-		this.mainGuiStateMachine.AddTransition(GuiStates.Initialized, GuiStates.ResonanceMinigame, null, null, null, null, GuiStateEvents.StartResonanceMiniGame);
 
 		this.mainGuiStateMachine.Start(GuiStates.Uninitialized);
-	}
-
-	private void SharpnessMinigame_OnEnter(StateMachine<GuiStates, GuiStateEvents> statemachine)
-	{
-		SceneManager.LoadScene("SharpnessMinigame");
-	}
-
-	private void ResonanceMinigame_OnEnter(StateMachine<GuiStates, GuiStateEvents> statemachine)
-	{
-		SceneManager.LoadScene("HammerAndFold");
-	}
-
-	private void HardnessMinigame_OnEnter(StateMachine<GuiStates, GuiStateEvents> statemachine)
-	{
-		SceneManager.LoadScene("Furnace Minigame");
 	}
 
 	private void Unitialized_OnEnter(StateMachine<GuiStates, GuiStateEvents> stateMachine)
@@ -448,20 +376,7 @@ public class GuiManager : MonoBehaviour
 		}
 		else
 		{
-			switch (this.startingMiniGame) 
-			{
-				case MinigameType.Hardness:
-					this.mainGuiStateMachine.HandleEvent(GuiStateEvents.StartHardnessMiniGame);
-					break;
-				case MinigameType.Resonance:
-					this.mainGuiStateMachine.HandleEvent(GuiStateEvents.StartResonanceMiniGame);
-					break;
-				case MinigameType.Sharpness:
-					this.mainGuiStateMachine.HandleEvent(GuiStateEvents.StartSharpnessMiniGame);
-					break;
-				default:
-					break;
-			}
+			this.mainGuiStateMachine.HandleEvent(GuiStateEvents.SkipToGameplay);
 		}
 	}
 
@@ -495,7 +410,6 @@ public class GuiManager : MonoBehaviour
 
 		// Trigger the gameplay to start immediately.
 		this.TriggerGameplayStart();
-		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.StartHardnessMiniGame);
 	}
 
 	private void InitializeGameplayHUD(StateMachine<GuiStates, GuiStateEvents> stateMachine)
