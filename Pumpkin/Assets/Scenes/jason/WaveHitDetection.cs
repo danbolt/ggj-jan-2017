@@ -9,7 +9,7 @@ public class WaveHitDetection : MonoBehaviour
 	{
 		if (Player)
 		{
-			Player.SendMessage("HitByWave", null, SendMessageOptions.RequireReceiver);
+			Player.SendMessage("OnHitByWave", null, SendMessageOptions.RequireReceiver);
 		}
 		else
 		{
