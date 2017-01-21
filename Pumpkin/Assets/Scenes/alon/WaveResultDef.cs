@@ -6,7 +6,14 @@ using System.Text;
 [Serializable]
 public class WaveResultDef
 {
-    public List<List<SpawnInstruction>> waves;
+    public List<WaveDef> waves;
+}
+
+[Serializable]
+public class WaveDef
+{
+    public float time;
+    public List<SpawnInstruction> content;
 }
 
 [Serializable]

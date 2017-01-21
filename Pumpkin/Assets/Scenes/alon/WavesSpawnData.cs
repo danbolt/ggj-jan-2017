@@ -18,7 +18,7 @@ public class WavesSpawnData : MonoBehaviour {
         currentIndex = 0;
     }
 
-    public List<SpawnInstruction> GetNextWave()
+    public WaveDef GetNextWave()
     {
         if (def.waves.Count > currentIndex)
         {
