@@ -21,4 +21,8 @@ public class SpawnInstruction
 {
     public string spawnPoint;
     public string objectToSpawn;
+    public string operation;
+    public string direction;
+    public int numberOfSpawns;
+    public float delayBetweenEachSpawn;
 }

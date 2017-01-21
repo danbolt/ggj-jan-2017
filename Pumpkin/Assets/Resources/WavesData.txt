@@ -4,32 +4,80 @@
       "time": 1,
       "content": [
         {
-          "spawnPoint": "SpawnPoint1",
-          "objectToSpawn": "Pickup"
-        }
-      ]
-    },
-    {
-      "time": 2,
-      "content": [
-        {
-          "spawnPoint": "SpawnPoint2",
-          "objectToSpawn": "Pickup"
-        }
-      ]
-    },
-    {
-      "time": 2,
-      "content": [
-        {
-          "spawnPoint": "SpawnPoint3",
-          "objectToSpawn": "Pickup"
+		  "numberOfSpawns": 3,
+		  "delayBetweenEachSpawn": 0.02,
+          "operation": "Shoot",
+		  "direction": "Right",
+          "spawnPoint": "SpawnPoint6",
+          "objectToSpawn": "Barrel"
         },
         {
-          "spawnPoint": "SpawnPoint4",
-          "objectToSpawn": "Pickup"
+		  "numberOfSpawns": 4,
+		  "delayBetweenEachSpawn": 0.8,
+          "operation": "Shoot",
+		  "direction": "Left",
+          "spawnPoint": "SpawnPoint5",
+          "objectToSpawn": "Barrel"
         }
       ]
-    }
+    },
+	{
+      "time": 5,
+      "content": [
+		  {
+			"spawnPoint": "SpawnPoint1",
+			"objectToSpawn": "Pickup"
+		  },
+		  {
+			"spawnPoint": "SpawnPoint2",
+			"objectToSpawn": "Pickup"
+		  },
+		   {
+			"spawnPoint": "SpawnPoint3",
+			"objectToSpawn": "Pickup"
+		  },
+		  {
+			"spawnPoint": "SpawnPoint4",
+			"objectToSpawn": "Pickup"
+		  },
+      ]
+    },
+	{
+      "time": 20,
+      "content": [
+		  {
+		  "numberOfSpawns": 20,
+		  "delayBetweenEachSpawn": 0.1,
+          "operation": "Shoot",
+		  "direction": "Left",
+          "spawnPoint": "SpawnPoint5",
+          "objectToSpawn": "Barrel"
+			},
+		{
+		  "numberOfSpawns": 20,
+		  "delayBetweenEachSpawn": 0.1,
+          "operation": "Shoot",
+		  "direction": "Right",
+          "spawnPoint": "SpawnPoint6",
+          "objectToSpawn": "Barrel"
+			},
+		{
+		  "numberOfSpawns": 20,
+		  "delayBetweenEachSpawn": 0.1,
+          "operation": "Shoot",
+		  "direction": "Right",
+          "spawnPoint": "SpawnPoint5",
+          "objectToSpawn": "Barrel"
+			},
+		{
+		  "numberOfSpawns": 20,
+		  "delayBetweenEachSpawn": 0.1,
+          "operation": "Shoot",
+		  "direction": "Right",
+          "spawnPoint": "SpawnPoint6",
+          "objectToSpawn": "Barrel"
+			},
+      ]
+    },
   ]
 }

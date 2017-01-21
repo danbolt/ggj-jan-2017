@@ -1,0 +1,8 @@
+{
+"numberOfSpawns": 5,
+"delayBetweenEachSpawn": 1,
+"operation": "Shoot",
+"direction": "Right",
+"spawnPoint": "SpawnPoint3",
+"objectToSpawn": "Barrel"
+}
