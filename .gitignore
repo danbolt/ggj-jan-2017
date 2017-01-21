@@ -18,15 +18,15 @@ Assets/AssetStoreTools*
 # ===================================== #
 [Ee]xported[Oo]bj/
 .vs/
-/*.userprefs
-/*.csproj
-/*.pidb
-/*.suo
-/*.sln
-/*.sln.DotSettings.*
-/*.user
-/*.unityproj
-/*.booproj
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.sln.DotSettings.*
+*.user
+*.unityproj
+*.booproj
  
 # ============ #
 # OS generated #
