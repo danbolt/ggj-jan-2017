@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54878531351445794}
   - component: {fileID: 136560382874045256}
   - component: {fileID: 114934501716912184}
+  - component: {fileID: 82590004336799808}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -98,6 +99,86 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!82 &82590004336799808
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1037694407204196}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114234269417870574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,6 +192,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Force: {x: 0, y: 8, z: 0}
   Button: Jump
+  JumpSounds:
+  - {fileID: 8300000, guid: 93ff0df364be14f4fabcd3cf806e3360, type: 3}
+  - {fileID: 8300000, guid: 2f6ff40bc62d13045af4d6d10cb147ea, type: 3}
+  - {fileID: 8300000, guid: 4a3ef9f7c0bf7d14582286d418d7e649, type: 3}
+  - {fileID: 8300000, guid: 0912d9c4794b90348a1ecd2345f99fd7, type: 3}
 --- !u!114 &114934501716912184
 MonoBehaviour:
   m_ObjectHideFlags: 1
