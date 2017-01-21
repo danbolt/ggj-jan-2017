@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class WavesSpawner : MonoBehaviour {
 
-    private const int TIMER_DEFAULT = 2;
+    public GameObject Wave;
+
+    private const int TIMER_DEFAULT = 9;
 
     private float timeLeft = 0;
     private Dictionary<string, GameObject> spawnPoints;
@@ -12,7 +14,8 @@ public class WavesSpawner : MonoBehaviour {
     private List<GameObject> currentSpawns;
     private WaveDef currentWaveDef;
 
-    // Use this for initialization
+    private WaveMotion _WaveMotion;
+
     void Start () {
 
         currentSpawns = new List<GameObject>();
@@ -26,28 +29,50 @@ public class WavesSpawner : MonoBehaviour {
         }
 
         spawnData = this.GetComponent<WavesSpawnData>();
-        SetCurrentWaveDef();
+        StartNextWave();
+
+        if (!Wave)
+        {
+            Debug.Log("wave spawner does not have wave gameobject set");
+        }
+        else
+        {
+            _WaveMotion = Wave.GetComponent<WaveMotion>();
+        }
     }
 
-    private void SetCurrentWaveDef()
+    private void StartNextWave()
     {
         currentWaveDef = spawnData.GetNextWave();
         if (currentWaveDef != null)
         {
             timeLeft = currentWaveDef.time;
         }
+        else
+        {
+            // TODO: spawn a random wave? or end the game?
+            timeLeft = TIMER_DEFAULT;
+        }
     }
-	
-	// Update is called once per frame
+
 	void Update () {
 
         timeLeft -= Time.deltaTime;
-        Debug.Log(timeLeft);
+
+        if (_WaveMotion != null && !_WaveMotion.IsPlaying)
+        {
+            float waveLeadTime = _WaveMotion.Duration / 2f;
+
+            if (Wave && timeLeft < waveLeadTime)
+            {
+                Wave.SendMessage("Trigger", null, SendMessageOptions.RequireReceiver);
+            }
+        }
+
         if (timeLeft < 0)
         {
             Spawn(currentWaveDef);
-            Debug.Log("I have finished counting down");
-            SetCurrentWaveDef();
+            StartNextWave();
         }
     }
 
