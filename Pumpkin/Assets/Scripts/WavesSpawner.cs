@@ -59,7 +59,10 @@ public class WavesSpawner : MonoBehaviour {
         {
             foreach (GameObject spawn in currentSpawns)
             {
-                Destroy(spawn);
+                if (spawn != null)
+                {
+                    Destroy(spawn);
+                }
             }
             foreach (SpawnInstruction spawnInstruction in waveDef.content)
             {
