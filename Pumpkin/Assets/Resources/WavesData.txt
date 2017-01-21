@@ -8,7 +8,7 @@
 		  "delayBetweenEachSpawn": 0.02,
           "operation": "Shoot",
 		  "direction": "Right",
-          "spawnPoint": "SpawnPoint1",
+          "spawnPoint": "SpawnPoint6",
           "objectToSpawn": "Barrel"
         },
         {
@@ -16,7 +16,7 @@
 		  "delayBetweenEachSpawn": 0.8,
           "operation": "Shoot",
 		  "direction": "Left",
-          "spawnPoint": "SpawnPoint4",
+          "spawnPoint": "SpawnPoint5",
           "objectToSpawn": "Barrel"
         }
       ]
@@ -47,34 +47,34 @@
       "content": [
 		  {
 		  "numberOfSpawns": 20,
-		  "delayBetweenEachSpawn": 0.01,
+		  "delayBetweenEachSpawn": 0.1,
           "operation": "Shoot",
 		  "direction": "Left",
-          "spawnPoint": "SpawnPoint1",
+          "spawnPoint": "SpawnPoint5",
           "objectToSpawn": "Barrel"
 			},
 		{
 		  "numberOfSpawns": 20,
-		  "delayBetweenEachSpawn": 0.01,
+		  "delayBetweenEachSpawn": 0.1,
           "operation": "Shoot",
 		  "direction": "Right",
-          "spawnPoint": "SpawnPoint2",
+          "spawnPoint": "SpawnPoint6",
           "objectToSpawn": "Barrel"
 			},
 		{
 		  "numberOfSpawns": 20,
-		  "delayBetweenEachSpawn": 0.01,
+		  "delayBetweenEachSpawn": 0.1,
           "operation": "Shoot",
 		  "direction": "Right",
-          "spawnPoint": "SpawnPoint4",
+          "spawnPoint": "SpawnPoint5",
           "objectToSpawn": "Barrel"
 			},
 		{
 		  "numberOfSpawns": 20,
-		  "delayBetweenEachSpawn": 0.01,
+		  "delayBetweenEachSpawn": 0.1,
           "operation": "Shoot",
 		  "direction": "Right",
-          "spawnPoint": "SpawnPoint3",
+          "spawnPoint": "SpawnPoint6",
           "objectToSpawn": "Barrel"
 			},
       ]
