@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c62e4a5de77464baadd60ad86b3abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: {x: 0, y: 5, z: 0}
+  Force: {x: 0, y: 8, z: 0}
   Button: Jump
 --- !u!114 &114934501716912184
 MonoBehaviour:
