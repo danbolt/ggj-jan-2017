@@ -42,11 +42,11 @@ public class WavesSpawner : MonoBehaviour {
 	void Update () {
 
         timeLeft -= Time.deltaTime;
-        Debug.Log(timeLeft);
+        //Debug.Log(timeLeft);
         if (timeLeft < 0)
         {
             Spawn(currentWaveDef);
-            Debug.Log("I have finished counting down");
+            //Debug.Log("I have finished counting down");
             SetCurrentWaveDef();
         }
     }
