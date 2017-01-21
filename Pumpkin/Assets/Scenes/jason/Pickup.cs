@@ -12,6 +12,6 @@ public class Pickup : MonoBehaviour
 
 	private void OnTriggerEnter()
 	{
-		Debug.Log("triggered");
+		gameObject.SetActive(false);
 	}
 }
