@@ -5,7 +5,7 @@
       "content": [
         {
           "spawnPoint": "SpawnPoint1",
-          "objectToSpawn": "TestSpawn1"
+          "objectToSpawn": "Pickup"
         }
       ]
     },
@@ -14,7 +14,7 @@
       "content": [
         {
           "spawnPoint": "SpawnPoint2",
-          "objectToSpawn": "TestSpawn1"
+          "objectToSpawn": "Pickup"
         }
       ]
     },
@@ -23,11 +23,11 @@
       "content": [
         {
           "spawnPoint": "SpawnPoint3",
-          "objectToSpawn": "TestSpawn1"
+          "objectToSpawn": "Pickup"
         },
         {
           "spawnPoint": "SpawnPoint4",
-          "objectToSpawn": "TestSpawn1"
+          "objectToSpawn": "Pickup"
         }
       ]
     }
