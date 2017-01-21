@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114234269417870574}
   - component: {fileID: 54878531351445794}
   - component: {fileID: 136560382874045256}
+  - component: {fileID: 114934501716912184}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -110,6 +111,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Force: {x: 0, y: 5, z: 0}
   Button: Jump
+--- !u!114 &114934501716912184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1037694407204196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857d882fad977f94aaa5c1840359b9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0.1
+  Axis: Horizontal
 --- !u!136 &136560382874045256
 CapsuleCollider:
   m_ObjectHideFlags: 1
