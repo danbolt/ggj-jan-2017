@@ -5,7 +5,7 @@ using UnityEngine;
 public class Balistic : MonoBehaviour {
 
     public string Direction = "Left";
-    public float forceMultiplier = 0.00000005f;
+    public float forceMultiplier = 0.5f;
     private Rigidbody body;
     private int timesApplied = 0;
 
@@ -17,7 +17,7 @@ public class Balistic : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (timesApplied < 10)
+        if (timesApplied < 30)
         {
             if (Direction == "Left")
             {
