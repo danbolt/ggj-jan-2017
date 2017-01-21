@@ -6,11 +6,15 @@ public class PlayerMove : MonoBehaviour
 	public float Speed = 1f;
 	public string Axis = "Horizontal";
 
+    #pragma warning disable 0414
 	private Rigidbody _Rigidbody;
+    #pragma warning restore 0414
 
 	private void Start()
 	{
+        #pragma warning disable 0414
 		_Rigidbody = GetComponent<Rigidbody>();
+        #pragma warning restore 0414
 	}
 
 	private void FixedUpdate()

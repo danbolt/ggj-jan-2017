@@ -1,0 +1,473 @@
+fileFormatVersion: 2
+guid: f21390a7b0acf6f45b84e310c7f75c97
+timeCreated: 1485033431
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm_L
+    100002: Arm_R
+    100004: Calf_L
+    100006: Calf_R
+    100008: Foot_L
+    100010: Foot_R
+    100012: Forearm_L
+    100014: Forearm_R
+    100016: Hand_L
+    100018: Hand_R
+    100020: Head
+    100022: Hips
+    100024: IndexF1_L
+    100026: IndexF1_R
+    100028: IndexF2_L
+    100030: IndexF2_R
+    100032: IndexF3_L
+    100034: IndexF3_R
+    100036: Leg_L
+    100038: Leg_R
+    100040: MiddleF1_L
+    100042: MiddleF1_R
+    100044: MiddleF2_L
+    100046: MiddleF2_L.001
+    100048: MiddleF2_R
+    100050: MiddleF2_R.001
+    100052: Neck
+    100054: PinkyF1_L
+    100056: PinkyF1_R
+    100058: PinkyF2_L
+    100060: PinkyF2_R
+    100062: PinkyF3_L
+    100064: PinkyF3_R
+    100066: Ring3F_L
+    100068: Ring3F_R
+    100070: RingF1_L
+    100072: RingF1_R
+    100074: RingF2_L
+    100076: RingF2_R
+    100078: Root
+    100080: Shoulder_L
+    100082: Shoulder_R
+    100084: Spine1
+    100086: Spine2
+    100088: Spine3
+    100090: //RootNode
+    100092: SurferGuy_Armature
+    100094: SurferGuy_mesh
+    100096: Thumb1_L
+    100098: Thumb1_R
+    100100: Thumb2_L
+    100102: Thumb2_R
+    100104: Thumb3_L
+    100106: Thumb3_R
+    100108: Toes_L
+    100110: Toes_R
+    400000: Arm_L
+    400002: Arm_R
+    400004: Calf_L
+    400006: Calf_R
+    400008: Foot_L
+    400010: Foot_R
+    400012: Forearm_L
+    400014: Forearm_R
+    400016: Hand_L
+    400018: Hand_R
+    400020: Head
+    400022: Hips
+    400024: IndexF1_L
+    400026: IndexF1_R
+    400028: IndexF2_L
+    400030: IndexF2_R
+    400032: IndexF3_L
+    400034: IndexF3_R
+    400036: Leg_L
+    400038: Leg_R
+    400040: MiddleF1_L
+    400042: MiddleF1_R
+    400044: MiddleF2_L
+    400046: MiddleF2_L.001
+    400048: MiddleF2_R
+    400050: MiddleF2_R.001
+    400052: Neck
+    400054: PinkyF1_L
+    400056: PinkyF1_R
+    400058: PinkyF2_L
+    400060: PinkyF2_R
+    400062: PinkyF3_L
+    400064: PinkyF3_R
+    400066: Ring3F_L
+    400068: Ring3F_R
+    400070: RingF1_L
+    400072: RingF1_R
+    400074: RingF2_L
+    400076: RingF2_R
+    400078: Root
+    400080: Shoulder_L
+    400082: Shoulder_R
+    400084: Spine1
+    400086: Spine2
+    400088: Spine3
+    400090: //RootNode
+    400092: SurferGuy_Armature
+    400094: SurferGuy_mesh
+    400096: Thumb1_L
+    400098: Thumb1_R
+    400100: Thumb2_L
+    400102: Thumb2_R
+    400104: Thumb3_L
+    400106: Thumb3_R
+    400108: Toes_L
+    400110: Toes_R
+    4300000: SurferGuy_mesh
+    7400000: SurferGuy_Armature|Idle
+    7400002: SurferGuy_Armature|PoseLib
+    7400004: SurferGuy_Armature|Running
+    9500000: //RootNode
+    13700000: SurferGuy_mesh
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: SurferGuy_Armature|Idle
+      takeName: SurferGuy_Armature|Idle
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SurferGuy_Armature
+        weight: 1
+      - path: SurferGuy_Armature/Root
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_L/Calf_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_L/Calf_L/Foot_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_L/Calf_L/Foot_L/Toes_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_R/Calf_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_R/Calf_R/Foot_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_R/Calf_R/Foot_R/Toes_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/IndexF1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/IndexF1_L/IndexF2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/IndexF1_L/IndexF2_L/IndexF3_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/MiddleF1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/MiddleF1_L/MiddleF2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/MiddleF1_L/MiddleF2_L/MiddleF2_L.001
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/PinkyF1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/PinkyF1_L/PinkyF2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/PinkyF1_L/PinkyF2_L/PinkyF3_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/RingF1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/RingF1_L/RingF2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/RingF1_L/RingF2_L/Ring3F_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/Thumb1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/Thumb1_L/Thumb2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/Thumb1_L/Thumb2_L/Thumb3_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/IndexF1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/IndexF1_R/IndexF2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/IndexF1_R/IndexF2_R/IndexF3_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/MiddleF1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/MiddleF1_R/MiddleF2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/MiddleF1_R/MiddleF2_R/MiddleF2_R.001
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/PinkyF1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/PinkyF1_R/PinkyF2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/PinkyF1_R/PinkyF2_R/PinkyF3_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/RingF1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/RingF1_R/RingF2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/RingF1_R/RingF2_R/Ring3F_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/Thumb1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/Thumb1_R/Thumb2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/Thumb1_R/Thumb2_R/Thumb3_R
+        weight: 1
+      - path: SurferGuy_mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SurferGuy_Armature|Running
+      takeName: SurferGuy_Armature|Running
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SurferGuy_Armature
+        weight: 1
+      - path: SurferGuy_Armature/Root
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_L/Calf_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_L/Calf_L/Foot_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_L/Calf_L/Foot_L/Toes_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_R/Calf_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_R/Calf_R/Foot_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Leg_R/Calf_R/Foot_R/Toes_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/IndexF1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/IndexF1_L/IndexF2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/IndexF1_L/IndexF2_L/IndexF3_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/MiddleF1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/MiddleF1_L/MiddleF2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/MiddleF1_L/MiddleF2_L/MiddleF2_L.001
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/PinkyF1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/PinkyF1_L/PinkyF2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/PinkyF1_L/PinkyF2_L/PinkyF3_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/RingF1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/RingF1_L/RingF2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/RingF1_L/RingF2_L/Ring3F_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/Thumb1_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/Thumb1_L/Thumb2_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_L/Arm_L/Forearm_L/Hand_L/Thumb1_L/Thumb2_L/Thumb3_L
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/IndexF1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/IndexF1_R/IndexF2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/IndexF1_R/IndexF2_R/IndexF3_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/MiddleF1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/MiddleF1_R/MiddleF2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/MiddleF1_R/MiddleF2_R/MiddleF2_R.001
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/PinkyF1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/PinkyF1_R/PinkyF2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/PinkyF1_R/PinkyF2_R/PinkyF3_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/RingF1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/RingF1_R/RingF2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/RingF1_R/RingF2_R/Ring3F_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/Thumb1_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/Thumb1_R/Thumb2_R
+        weight: 1
+      - path: SurferGuy_Armature/Root/Hips/Spine1/Spine2/Spine3/Shoulder_R/Arm_R/Forearm_R/Hand_R/Thumb1_R/Thumb2_R/Thumb3_R
+        weight: 1
+      - path: SurferGuy_mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
