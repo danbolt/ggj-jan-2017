@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23294804369196886}
   - component: {fileID: 114814144881825398}
   - component: {fileID: 114331995318399910}
+  - component: {fileID: 114810176347822016}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a6dc2757fa5989043951adbedbf0336a, type: 2}
+  - {fileID: 2100000, guid: 6d54c0be552a24108900907370462fa9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,6 +107,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!114 &114810176347822016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587900904822484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e54644c12204fe3ba83ea7ed1f95b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 23294804369196886}
+  SpeedScale: 0.25
 --- !u!114 &114814144881825398
 MonoBehaviour:
   m_ObjectHideFlags: 1
