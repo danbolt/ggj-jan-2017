@@ -6,6 +6,10 @@
 [Oo]bj/
 [Bb]uild
 [Ll]ibrary/
+Pumpkin/Temp/
+Pumpkin/Obj/
+Pumpkin/Build
+Pumpkin/Library/
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
