@@ -1,0 +1,26 @@
+{
+  "waves": [
+    [
+      {
+        "spawnPoint": "SpawnPoint1",
+        "objectToSpawn": "TestSpawn1"
+      }
+    ],
+    [
+      {
+        "spawnPoint": "SpawnPoint2",
+        "objectToSpawn": "TestSpawn1"
+      }
+    ],
+    [
+      {
+        "spawnPoint": "SpawnPoint4",
+        "objectToSpawn": "TestSpawn1"
+      },
+      {
+        "spawnPoint": "SpawnPoint3",
+        "objectToSpawn": "TestSpawn1"
+      }
+    ]
+  ]
+}
