@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
 	public float Speed = 1f;
 	public string Axis = "Horizontal";
