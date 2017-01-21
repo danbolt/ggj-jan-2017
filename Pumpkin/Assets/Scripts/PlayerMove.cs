@@ -6,6 +6,11 @@ public class PlayerMove : MonoBehaviour
 	public float Speed = 1f;
 	public string Axis = "Horizontal";
 
+    /// <summary>
+    /// Reference to the <see cref="UnityEngine.Transform"/> used for the player's 3D model. Set this in the editor.
+    /// </summary>
+    public Transform modelTransform = null;
+
     #pragma warning disable 0414
 	private Rigidbody _Rigidbody;
     #pragma warning restore 0414
@@ -20,6 +25,7 @@ public class PlayerMove : MonoBehaviour
 	private void FixedUpdate()
 	{
 		transform.position = transform.position + MoveDirection;
+        modelTransform.forward = Vector3.Normalize(MoveDirection);
 	}
 
 	private Vector3 MoveDirection

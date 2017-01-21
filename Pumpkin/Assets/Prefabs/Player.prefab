@@ -1819,6 +1819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 0.1
   Axis: Horizontal
+  modelTransform: {fileID: 4514282705713148}
 --- !u!114 &114977919697387478
 MonoBehaviour:
   m_ObjectHideFlags: 1
