@@ -1,26 +1,35 @@
 {
   "waves": [
-    [
-      {
-        "spawnPoint": "SpawnPoint1",
-        "objectToSpawn": "TestSpawn1"
-      }
-    ],
-    [
-      {
-        "spawnPoint": "SpawnPoint2",
-        "objectToSpawn": "TestSpawn1"
-      }
-    ],
-    [
-      {
-        "spawnPoint": "SpawnPoint4",
-        "objectToSpawn": "TestSpawn1"
-      },
-      {
-        "spawnPoint": "SpawnPoint3",
-        "objectToSpawn": "TestSpawn1"
-      }
-    ]
+    {
+      "time": 1,
+      "content": [
+        {
+          "spawnPoint": "SpawnPoint1",
+          "objectToSpawn": "TestSpawn1"
+        }
+      ]
+    },
+    {
+      "time": 2,
+      "content": [
+        {
+          "spawnPoint": "SpawnPoint2",
+          "objectToSpawn": "TestSpawn1"
+        }
+      ]
+    },
+    {
+      "time": 2,
+      "content": [
+        {
+          "spawnPoint": "SpawnPoint3",
+          "objectToSpawn": "TestSpawn1"
+        },
+        {
+          "spawnPoint": "SpawnPoint4",
+          "objectToSpawn": "TestSpawn1"
+        }
+      ]
+    }
   ]
 }

@@ -9,10 +9,13 @@ public class WavesSpawner : MonoBehaviour {
     private float timeLeft = 0;
     private Dictionary<string, GameObject> spawnPoints;
     private WavesSpawnData spawnData;
+    private List<GameObject> currentSpawns;
+    private WaveDef currentWaveDef;
 
-	// Use this for initialization
-	void Start () {
-        timeLeft = TIMER_DEFAULT;
+    // Use this for initialization
+    void Start () {
+
+        currentSpawns = new List<GameObject>();
 
         // Get all spawn points and keep a reference to them
         var spawnPointsSearch = GameObject.FindGameObjectsWithTag("SpawnPoints");
@@ -23,6 +26,16 @@ public class WavesSpawner : MonoBehaviour {
         }
 
         spawnData = this.GetComponent<WavesSpawnData>();
+        SetCurrentWaveDef();
+    }
+
+    private void SetCurrentWaveDef()
+    {
+        currentWaveDef = spawnData.GetNextWave();
+        if (currentWaveDef != null)
+        {
+            timeLeft = currentWaveDef.time;
+        }
     }
 	
 	// Update is called once per frame
@@ -32,24 +45,29 @@ public class WavesSpawner : MonoBehaviour {
         Debug.Log(timeLeft);
         if (timeLeft < 0)
         {
-            Spawn();
+            Spawn(currentWaveDef);
             Debug.Log("I have finished counting down");
-            timeLeft = TIMER_DEFAULT;
+            SetCurrentWaveDef();
         }
     }
 
-    private void Spawn() {
+    private void Spawn(WaveDef waveDef) {
         // Get assigned spawn points
         // And create objects
-
-        List<SpawnInstruction> spawnInstructions = spawnData.GetNextWave();
-        if (spawnInstructions != null)
+        // Clear the previous wave
+        if (waveDef != null)
         {
-            foreach (SpawnInstruction spawnInstruction in spawnInstructions)
+            foreach (GameObject spawn in currentSpawns)
+            {
+                Destroy(spawn);
+            }
+            foreach (SpawnInstruction spawnInstruction in waveDef.content)
             {
                 Object foundObject = Resources.Load(spawnInstruction.objectToSpawn);
 
                 GameObject targetObject = Instantiate(foundObject as GameObject, spawnPoints[spawnInstruction.spawnPoint].transform.position, new Quaternion());
+
+                currentSpawns.Add(targetObject);
             }
 
         }
