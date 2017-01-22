@@ -206,6 +206,7 @@ public class GuiManager : MonoBehaviour
 	/// <summary>The trigger gameplay start.</summary>
 	public void TriggerGameplayStart()
 	{
+		this.gameManager.UnPause();
 		if (this.mainGuiStateMachine.GetState() == GuiStates.StartingGameplay)
 		{
 			// Modify this so its an actual start and not a game unpause
