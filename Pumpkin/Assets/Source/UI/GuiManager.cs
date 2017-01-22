@@ -371,6 +371,7 @@ public class GuiManager : MonoBehaviour
 		this.guiGameObject.name = "GuiSystem";
 
 		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.InitializedGui);
+		DontDestroyOnLoad(this.guiGameObject);
 	}
 
 	private void Initialized_OnEnter(StateMachine<GuiStates, GuiStateEvents> stateMachine)

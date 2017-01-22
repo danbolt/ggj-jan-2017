@@ -20,10 +20,9 @@ public class Pickup : MonoBehaviour
 
 	private void OnTriggerEnter(Collider c)
 	{
-		this.gameManager.IncreaseScore();
-
         if (c.gameObject.name == "Player")
         {
+			this.gameManager.IncreaseScore();
             gameObject.SetActive(false);
         }
 	}
