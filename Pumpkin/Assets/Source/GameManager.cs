@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
 	private int highScore = 0;
 	private int playerScore = 0;
 	private bool isGameRunning;
+	private float elapsedTime = 0.0f;
 
 	private static GameManager instance;
 
@@ -22,6 +23,22 @@ public class GameManager : MonoBehaviour {
 		get 
 		{
 			return this.playerScore;
+		}
+	}
+
+	public float CurrentElapsedTime
+	{
+		get
+		{
+			return this.elapsedTime;
+		}
+	}
+
+	public int HighScore
+	{
+		get
+		{
+			return this.highScore;
 		}
 	}
 
@@ -80,5 +97,12 @@ public class GameManager : MonoBehaviour {
 	{
 		this.highScore = this.playerScore;
 	}
+		
+	public void ResetTime()
+	{
+		this.elapsedTime = 0.0f;
+	}
+
+
 
 }
