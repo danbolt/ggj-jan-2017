@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23394147851305160}
   - component: {fileID: 54649709404655488}
   - component: {fileID: 114569104902055374}
+  - component: {fileID: 114904280045285172}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355759609370090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.791437, y: 21.234652, z: -125.17969}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalPosition: {x: 6.53, y: -0.2, z: -4.046815}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1b8753d0a0d770f46ad0b52cc5b1238a, type: 2}
+  - {fileID: 2100000, guid: cfb2f7741ba1240d58652acfe9976cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,7 +82,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355759609370090}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 561ab86819c7b44ecbb15b89b70e5724, type: 3}
 --- !u!54 &54649709404655488
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -120,3 +121,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f66b1994a1d287448a71e9d08405197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114904280045285172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355759609370090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc61291357fa4f408f9d4eb068f01b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeScale: 155
