@@ -25,7 +25,10 @@ public class PlayerMove : MonoBehaviour
 	private void FixedUpdate()
 	{
 		transform.position = transform.position + MoveDirection;
-        modelTransform.forward = Vector3.Normalize(MoveDirection);
+		if (MoveDirection != Vector3.zero)
+		{
+			modelTransform.forward = Vector3.Normalize(MoveDirection);
+		}
 	}
 
 	private Vector3 MoveDirection

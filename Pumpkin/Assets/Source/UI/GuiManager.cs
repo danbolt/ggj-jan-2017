@@ -410,6 +410,8 @@ public class GuiManager : MonoBehaviour
 
 		// Trigger the gameplay to start immediately.
 		this.TriggerGameplayStart();
+		SceneManager.LoadScene("gameplay");
+		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.EnterGameplay);
 	}
 
 	private void InitializeGameplayHUD(StateMachine<GuiStates, GuiStateEvents> stateMachine)
