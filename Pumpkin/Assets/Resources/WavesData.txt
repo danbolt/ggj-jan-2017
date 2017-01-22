@@ -3,7 +3,7 @@
     {
       "time": 1,
 	  "boatRockingSpeed": 0,
-	  "boatMaxAngle": 0.00,
+	  "boatMaxAngle": 0.0,
       "content": [
         {
           "spawnPoint": "SpawnPoint (10)",
