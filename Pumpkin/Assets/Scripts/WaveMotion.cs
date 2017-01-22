@@ -42,7 +42,11 @@ public class WaveMotion : MonoBehaviour
 
     private void PlayWaveSplashSound()
     {
-        SoundManager.Instance.PlayWaveSplash();
+		var soundManager = SoundManager.Instance;
+		if (soundManager != null)
+		{
+			soundManager.PlayWaveSplash();
+		}
     }
 
 	public bool IsPlaying
