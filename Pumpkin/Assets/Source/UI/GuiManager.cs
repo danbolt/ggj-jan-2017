@@ -363,9 +363,6 @@ public class GuiManager : MonoBehaviour
 		this.guiGameObject.name = "GuiSystem";
 
 		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.InitializedGui);
-
-		// We need to keep this object around so we don't blow out our GUI system.
-		DontDestroyOnLoad(this.guiGameObject);
 	}
 
 	private void Initialized_OnEnter(StateMachine<GuiStates, GuiStateEvents> stateMachine)
@@ -410,7 +407,7 @@ public class GuiManager : MonoBehaviour
 
 		// Trigger the gameplay to start immediately.
 		this.TriggerGameplayStart();
-		SceneManager.LoadScene("gameplay");
+		SceneManager.LoadScene("LevelDesignPrototype");
 		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.EnterGameplay);
 	}
 

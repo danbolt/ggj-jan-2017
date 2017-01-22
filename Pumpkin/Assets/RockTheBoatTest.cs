@@ -26,7 +26,7 @@ public class RockTheBoatTest : MonoBehaviour {
         {
             if (dirction == "Up")
             {
-                if (transform.rotation.x > -def.boatMaxAngle)
+                if (transform.rotation.z < def.boatMaxAngle)
                 {
                     transform.RotateAround(Vector3.zero, new Vector3(0, 0, 1), def.boatRockingSpeed * Time.deltaTime);
                 }
@@ -37,7 +37,7 @@ public class RockTheBoatTest : MonoBehaviour {
             }
             if (dirction == "Down")
             {
-                if (transform.rotation.x < def.boatMaxAngle)
+                if (transform.rotation.z > -def.boatMaxAngle)
                 {
                     transform.RotateAround(Vector3.zero, new Vector3(0, 0, -1), def.boatRockingSpeed * Time.deltaTime);
                 }
