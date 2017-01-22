@@ -1,24 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
+    public GameObject Target;
+    public Vector3 LookAtOffset;
+    public Vector3 CameraRelativePosition;
+    //public float SmoothingFactor = 5f;
 
-    // Use this for initialization
-
-    public GameObject target;
-
-    void Start()
+    void LateUpdate()
     {
+        if (!Target) { return; }
 
-    }
+        Vector3 newPosition = Target.transform.position + Target.transform.rotation * CameraRelativePosition;
+        //transform.position = Vector3.Lerp(transform.position, newPosition, SmoothingFactor * Time.deltaTime);
+        transform.position = newPosition;
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        var cameraTransform = this.GetComponent<Camera>().transform;
-        cameraTransform.position = new Vector3(target.transform.position.x, cameraTransform.position.y, cameraTransform.position.z);
+        transform.LookAt(Target.transform.position + Target.transform.rotation * LookAtOffset);
     }
 }
