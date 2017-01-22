@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class RockTheBoatTest : MonoBehaviour
+public class RockTheBoat : MonoBehaviour
 {
     private bool RockUpDirection = false;
     private WaveDef _WaveDef;

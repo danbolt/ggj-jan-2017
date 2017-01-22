@@ -15,7 +15,7 @@ public class WavesSpawner : MonoBehaviour {
     private WaveDef currentWaveDef;
 
     private WaveMotion _WaveMotion;
-    private RockTheBoatTest _Boat;
+    private RockTheBoat _Boat;
 
     void Start () {
 
@@ -41,7 +41,7 @@ public class WavesSpawner : MonoBehaviour {
             _WaveMotion = Wave.GetComponent<WaveMotion>();
         }
 
-        _Boat = GameObject.FindObjectOfType<RockTheBoatTest>();
+        _Boat = GameObject.FindObjectOfType<RockTheBoat>();
     }
 
     private void StartNextWave()
