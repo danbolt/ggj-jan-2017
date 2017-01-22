@@ -55,12 +55,12 @@ public class SoundManager : MonoBehaviour
 		}
 	}
 
-	#endregion
+    #endregion
 
-	#region  Methods - Public
+    #region  Methods - Public
 
-	/// <summary>The play button click.</summary>
-	public void PlayButtonClick()
+    /// <summary>The play button click.</summary>
+    public void PlayButtonClick()
 	{
 		this.sfxSource.PlayOneShot(this.buttonPressSfx);
 	}
@@ -77,8 +77,17 @@ public class SoundManager : MonoBehaviour
 
 	private void Awake()
 	{
-		instance = this;
-	}
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+    }
 
 	private void Start()
 	{
