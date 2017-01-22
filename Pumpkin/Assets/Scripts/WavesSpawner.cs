@@ -116,7 +116,10 @@ public class WavesSpawner : MonoBehaviour {
             }
 
             // Boat rocking
-            _Boat.SetRocking(waveDef);
+            if (waveDef.boatRockingSpeed != 0 && waveDef.boatMaxAngle != 0)
+            {
+                _Boat.SetRocking(waveDef);
+            }
         }
     }
 }
