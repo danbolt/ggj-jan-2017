@@ -29,7 +29,7 @@ public class HUDManager : MonoBehaviour {
 	{
 		if (this.gameManager != null) 
 		{
-			scoreLabel.text = (Mathf.Floor(this.gameManager.CurrentElapsedTime) + this.gameManager.CurrentScore).ToString();
+			scoreLabel.text = ( Mathf.Floor(this.gameManager.CurrentElapsedTime) + this.gameManager.CurrentScore).ToString();
 		}	
 	}
 
