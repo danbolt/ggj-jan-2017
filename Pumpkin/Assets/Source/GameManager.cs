@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour {
 	{
 		get
 		{
+			Debug.Log("Beat High Score!");
 			return this.playerScore > this.highScore;
 		}
 	}
@@ -70,7 +71,13 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (GuiManager.Instance )
+		{
+			if (!GuiManager.Instance.IsPaused())
+			{
+				this.elapsedTime += Time.deltaTime;
+			}
+		}
 	}
 
 	public void IncreaseScore()
@@ -95,7 +102,7 @@ public class GameManager : MonoBehaviour {
 
 	public void UpdateHighScore()
 	{
-		this.highScore = this.playerScore;
+		this.highScore = this.playerScore + Mathf.FloorToInt(this.elapsedTime);
 	}
 		
 	public void ResetTime()

@@ -27,7 +27,7 @@ public class MainMenuManager : MonoBehaviour {
 	{
 		if (uiManagerInstance)
 		{
-			uiManagerInstance.ShowCredits();
+			uiManagerInstance.ShowSettings();
 		}
 	}
 

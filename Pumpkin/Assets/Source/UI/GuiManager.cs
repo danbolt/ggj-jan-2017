@@ -206,6 +206,7 @@ public class GuiManager : MonoBehaviour
 	/// <summary>The trigger gameplay start.</summary>
 	public void TriggerGameplayStart()
 	{
+		this.gameManager.UnPause();
 		if (this.mainGuiStateMachine.GetState() == GuiStates.StartingGameplay)
 		{
 			// Modify this so its an actual start and not a game unpause
@@ -278,17 +279,17 @@ public class GuiManager : MonoBehaviour
 
 		if (this.gameManager.BeatHighScore)
 		{
-			this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowHighScoreScreen);
+			this.gameManager.UpdateHighScore();
 		}
-		else
-		{
-			this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
-		}
+
+		this.gameManager.ResetTime();
+
+		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
 	}
 
 	public void ShowCredits()
 	{
-		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
+		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowSettingsPopup);
 	}
 
 	#endregion
@@ -349,7 +350,7 @@ public class GuiManager : MonoBehaviour
 		// Return to Main Menu transitions
 		this.mainGuiStateMachine.AddTransition(GuiStates.Gameplay, GuiStates.MainMenu, null, null, null, null, GuiStateEvents.ReturnToMenu);
 		this.mainGuiStateMachine.AddTransition(GuiStates.GameplayPaused, GuiStates.MainMenu, null, null, null, null, GuiStateEvents.ReturnToMenu);
-		this.mainGuiStateMachine.AddTransition(GuiStates.Settings, GuiStates.MainMenu, null, null, null, null, GuiStateEvents.DismissPopup);
+		this.mainGuiStateMachine.AddTransition(GuiStates.Settings, GuiStates.MainMenu, null, null, null, null, GuiStateEvents.ReturnToMenu);
 		this.mainGuiStateMachine.AddTransition(GuiStates.GameplayPostGame, GuiStates.MainMenu, null, null, null, null, GuiStateEvents.ReturnToMenu);
 
 		// Gameplay transitions.
@@ -471,8 +472,9 @@ public class GuiManager : MonoBehaviour
 
 	private void Settings_OnEnter(StateMachine<GuiStates, GuiStateEvents> stateMachine)
 	{
-		this.currentGuiPopup = NGUITools.AddChild(this.guiGameObject, Resources.Load(GuiSystemPath + "Popups/SettingsPopup") as GameObject);
-		this.currentGuiPopup.name = "SettingsPopup";
+		Destroy(this.currentGuiPanel);
+		this.currentGuiPanel = NGUITools.AddChild(this.guiGameObject, Resources.Load(GuiSystemPath + "Credits/Credits") as GameObject);
+		this.currentGuiPanel.name = "Credits";
 	}
 
 	private void Settings_OnExit(StateMachine<GuiStates, GuiStateEvents> stateMachine)
@@ -483,8 +485,9 @@ public class GuiManager : MonoBehaviour
 	private void GameplayPostGame_OnEnter(StateMachine<GuiStates, GuiStateEvents> stateMachine)
 	{
 		Destroy(this.currentGuiPanel);
-		this.currentGuiPanel = NGUITools.AddChild(this.guiGameObject, Resources.Load(GuiSystemPath + "PostGameScreen/ScoreScreen") as GameObject);
-		this.currentGuiPanel.name = "EndGameScreen";
+		//this.currentGuiPanel = NGUITools.AddChild(this.guiGameObject, Resources.Load(GuiSystemPath + "PostGameScreen/ScoreScreen") as GameObject);
+		//this.currentGuiPanel.name = "EndGameScreen";
+		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ReturnToMenu);
 	}
 
 	private void GameplayPostGame_OnExit(StateMachine<GuiStates, GuiStateEvents> stateMachine)
