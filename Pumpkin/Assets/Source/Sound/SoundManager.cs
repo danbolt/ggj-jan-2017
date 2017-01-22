@@ -39,15 +39,30 @@ public class SoundManager : MonoBehaviour
 	[SerializeField]
 	private AudioClip scoreCalulationSfx;
 
-	[SerializeField]
+    [SerializeField]
+    private AudioClip[] coinPickSfx;
+
+    [SerializeField]
+    private AudioClip wavePreSplashSfx;
+
+    [SerializeField]
+    private AudioClip waveSplashSfx;
+
+    [SerializeField]
+    private AudioClip barrelShotSfx;
+
+    [SerializeField]
 	private AudioSource sfxSource;
 
-	#endregion
+    [SerializeField]
+    private AudioSource waterSfxSource;
 
-	#region  Properties - Public
+    #endregion
 
-	/// <summary>Gets the instance.</summary>
-	public static SoundManager Instance
+    #region  Properties - Public
+
+    /// <summary>Gets the instance.</summary>
+    public static SoundManager Instance
 	{
 		get
 		{
@@ -92,8 +107,31 @@ public class SoundManager : MonoBehaviour
 	private void Start()
 	{
 		this.musicAudioSource.clip = this.backgroundMusic[0];
-		this.musicAudioSource.Play();
+        this.musicAudioSource.loop = true;
+        this.musicAudioSource.Play();
 	}
 
-	#endregion
+    public void PlayCoinSound()
+    {
+        int randomIndex = Random.Range(0, coinPickSfx.Length);
+        this.sfxSource.clip = (this.coinPickSfx[randomIndex]);
+        this.sfxSource.Play();
+    }
+
+    public void PlayWavePreSplash()
+    {
+        this.waterSfxSource.PlayOneShot(this.wavePreSplashSfx);
+    }
+
+    public void PlayWaveSplash()
+    {
+        this.waterSfxSource.PlayOneShot(this.waveSplashSfx);
+    }
+
+    public void PlayBarrelShotSound(AudioSource source)
+    {
+        source.PlayOneShot(this.barrelShotSfx);
+    }
+
+    #endregion
 }

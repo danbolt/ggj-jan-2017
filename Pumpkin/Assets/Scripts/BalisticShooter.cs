@@ -10,10 +10,12 @@ public class BalisticShooter : MonoBehaviour
     private float delay;
     private List<GameObject> spawns;
     private GameObject spawnObject;
+    private AudioSource sfxSource;
 
     void Start()
     {
         spawns = new List<GameObject>();
+        sfxSource = GetComponent<AudioSource>();
     }
 
     void Update ()
@@ -52,5 +54,7 @@ public class BalisticShooter : MonoBehaviour
         spawned.GetComponent<Balistic>().Direction = instrucion.direction;
 
         spawns.Add(spawned);
+
+        SoundManager.Instance.PlayBarrelShotSound(sfxSource);
     }
 }
