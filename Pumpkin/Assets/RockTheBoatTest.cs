@@ -1,50 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
-public class RockTheBoatTest : MonoBehaviour {
+public class RockTheBoatTest : MonoBehaviour
+{
+    private bool RockUpDirection = false;
+    private WaveDef _WaveDef;
 
-    private string dirction = "Up";
-    private WaveDef def;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-
-    public void SetRocking(WaveDef def)
+    public void SetRocking(WaveDef waveDef)
     {
-        this.def = def;
-
+        this._WaveDef = waveDef;
     }
 
-    // Update is called once per frame
-    void Update () {
-
-        //Debug.Log(transform.rotation);
-        if (this.def != null)
+    void Update()
+    {
+        if (this._WaveDef == null)
         {
-            if (dirction == "Up")
+            return;
+        }
+
+        if (RockUpDirection)
+        {
+            if (transform.rotation.z < this._WaveDef.boatMaxAngle)
             {
-                if (transform.rotation.z < def.boatMaxAngle)
-                {
-                    transform.RotateAround(Vector3.zero, new Vector3(0, 0, 1), def.boatRockingSpeed * Time.deltaTime);
-                }
-                else
-                {
-                     dirction = "Down";
-                }
+                transform.RotateAround(Vector3.zero, new Vector3(0, 0, 1), this._WaveDef.boatRockingSpeed * Time.deltaTime);
             }
-            if (dirction == "Down")
+            else
             {
-                if (transform.rotation.z > -def.boatMaxAngle)
-                {
-                    transform.RotateAround(Vector3.zero, new Vector3(0, 0, -1), def.boatRockingSpeed * Time.deltaTime);
-                }
-                else
-                {
-                    dirction = "Up";
-                }
+                this.RockUpDirection = !this.RockUpDirection;
+            }
+        }
+        else // rock down
+        {
+            if (transform.rotation.z > -this._WaveDef.boatMaxAngle)
+            {
+                transform.RotateAround(Vector3.zero, new Vector3(0, 0, -1), this._WaveDef.boatRockingSpeed * Time.deltaTime);
+            }
+            else
+            {
+                this.RockUpDirection = !this.RockUpDirection;
             }
         }
     }
