@@ -4,61 +4,61 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-	public Vector3 Force = new Vector3(0f, 2f, 0f);
+	public Vector3 Force = new Vector3(0f, 1f, 0f);
+	public Vector3 ExtraDrag = Vector3.zero;
 	public string Button = "Jump";
+	public string Button2 = "Fire2";
 	public AudioClip[] JumpSounds;
 
 	private Rigidbody _Rigidbody;
 	private CapsuleCollider _Collider;
 	private AudioSource _AudioSource;
-	private float ColliderHeight;
 	private System.Random _Random = new System.Random();
 	private int LastUsedSoundIndex = -1;
-    private bool inAir;
 
-
-    private void Start()
+	private void Start()
 	{
 		_Rigidbody = GetComponent<Rigidbody>();
 		_Collider = GetComponent<CapsuleCollider>();
 		_AudioSource = GetComponent<AudioSource>();
-		ColliderHeight = _Collider.bounds.extents.y;
-
-        inAir = false;
-
-    }
+	}
 
 	private void FixedUpdate()
 	{
-         inAir = !IsGrounded;
+		// kludge to account for the weird gravity scale
+		_Rigidbody.velocity = _Rigidbody.velocity + ExtraDrag * Time.deltaTime;
 
-        if ((Input.GetButtonDown(Button) || Input.GetButtonDown("Fire2")) && !inAir)
+		bool jumpButtonPressed = Input.GetButtonDown(Button) || Input.GetButtonDown(Button2);
+		if (jumpButtonPressed && IsGrounded)
 		{
 			Jump();
 			PlayJumpSound();
 		}
-
-        if (inAir)
-        { 
-            Vector3 vel = _Rigidbody.velocity;
-            vel.y -= 20.8f * Time.deltaTime;
-            _Rigidbody.velocity = vel;
-
-        }
-    }
+	}
 
 	private bool IsGrounded
 	{
 		get
 		{
-			//Physics.CheckCapsule(collider.bounds.center,new Vector3(collider.bounds.center.x,collider.bounds.min.y-0.1f,collider.bounds.center.z),0.18f));
-			return Physics.Raycast(transform.position, -Vector3.up, ColliderHeight + 0.02f);
+			return Physics.Raycast(transform.position, -Vector3.up, _Collider.bounds.extents.y - 0.02f);
+
+			// var colliderStart = _Collider.bounds.center;
+			// var colliderEnd = new Vector3(_Collider.bounds.center.x, _Collider.bounds.min.y - 0.1f, _Collider.bounds.center.z);
+			// int allLayers = -1;
+
+			// bool result = Physics.CheckCapsule(
+			// 	colliderStart,
+			// 	colliderEnd,
+			// 	_Collider.radius,
+			// 	allLayers,
+			// 	QueryTriggerInteraction.Ignore);
+			// return result;
 		}
 	}
 
 	private void Jump()
 	{
-        _Rigidbody.velocity = Vector3.zero;
+		_Rigidbody.velocity = Vector3.zero;
 		_Rigidbody.angularVelocity = Vector3.zero;
 		_Rigidbody.AddForce(Force, ForceMode.Impulse);
 	}
