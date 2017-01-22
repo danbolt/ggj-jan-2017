@@ -2,6 +2,8 @@
   "waves": [
     {
       "time": 1,
+	  "boatRockingSpeed": 0,
+	  "boatMaxAngle": 0.00,
       "content": [
         {
           "spawnPoint": "SpawnPoint (10)",
@@ -31,6 +33,8 @@
     },
     {
       "time": 20,
+	  "boatRockingSpeed": 1,
+	  "boatMaxAngle": 0.05,
       "content": [
         {
           "numberOfSpawns": 5,
@@ -60,6 +64,8 @@
     },
     {
       "time": 12,
+	  "boatRockingSpeed": 5,
+	  "boatMaxAngle": 0.07,
       "content": [
 	  {
           "numberOfSpawns": 8,
@@ -97,6 +103,8 @@
     },
 	{
       "time": 15,
+	  "boatRockingSpeed": 8,
+	  "boatMaxAngle": 0.10,
       "content": [
 	   {
           "numberOfSpawns": 10,
