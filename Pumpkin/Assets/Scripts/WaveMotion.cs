@@ -36,8 +36,14 @@ public class WaveMotion : MonoBehaviour
 
 	public void Trigger()
 	{
-		_Timer = 0f;
+        PlayWaveSplashSound();
+        _Timer = 0f;
 	}
+
+    private void PlayWaveSplashSound()
+    {
+        SoundManager.Instance.PlayWaveSplash();
+    }
 
 	public bool IsPlaying
 	{

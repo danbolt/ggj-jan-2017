@@ -9,12 +9,15 @@ public class Pickup : MonoBehaviour
 	{
 		if (otherCollider.gameObject.name == ActorName)
 		{
-			if (GameManager.Instance)
+            SoundManager.Instance.PlayCoinSound();
+
+            if (GameManager.Instance)
 			{
 				GameManager.Instance.IncreaseScore();
-			}
+            }
 
 			gameObject.SetActive(false);
+
 		}
 	}
 }
