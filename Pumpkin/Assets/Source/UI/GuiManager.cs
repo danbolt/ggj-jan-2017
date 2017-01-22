@@ -410,7 +410,7 @@ public class GuiManager : MonoBehaviour
 
 		// Trigger the gameplay to start immediately.
 		this.TriggerGameplayStart();
-		SceneManager.LoadScene("gameplay");
+		SceneManager.LoadScene("LevelDesignPrototype");
 		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.EnterGameplay);
 	}
 
