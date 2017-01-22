@@ -76,7 +76,10 @@ public class GuiManager : MonoBehaviour
 		ShowSettingsPopup, 
 
 		/// <summary>The show end game screen.</summary>
-		ShowEndGameScreen, 
+		ShowEndGameScreen,
+
+		/// <summary>Show High Score screen event. </summary>
+		ShowHighScoreScreen,
 
 		/// <summary>The enter gameplay.</summary>
 		EnterGameplay, 
@@ -273,7 +276,14 @@ public class GuiManager : MonoBehaviour
 			this.gameManager.Pause();
 		}
 
-		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
+		if (this.gameManager.BeatHighScore)
+		{
+			this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowHighScoreScreen);
+		}
+		else
+		{
+			this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
+		}
 	}
 
 	public void ShowCredits()
@@ -346,6 +356,8 @@ public class GuiManager : MonoBehaviour
 		this.mainGuiStateMachine.AddTransition(GuiStates.StartingGameplay, GuiStates.Gameplay, null, null, null, null, GuiStateEvents.EnterGameplay);
 		this.mainGuiStateMachine.AddTransition(GuiStates.GameplayResuming, GuiStates.Gameplay, null, null, null, null, GuiStateEvents.ResumeGameplay);
 		this.mainGuiStateMachine.AddTransition(GuiStates.Gameplay, GuiStates.GameplayPaused, null, null, null, null, GuiStateEvents.PauseGameplay);
+		this.mainGuiStateMachine.AddTransition(GuiStates.Gameplay, GuiStates.GameplayHighScore, null, null, null, null, GuiStateEvents.ShowHighScoreScreen);
+		this.mainGuiStateMachine.AddTransition(GuiStates.Gameplay, GuiStates.GameplayPostGame, null, null, null, null, GuiStateEvents.ShowEndGameScreen);
 		this.mainGuiStateMachine.AddTransition(GuiStates.GameplayPaused, GuiStates.GameplayResuming, null, null, null, null, GuiStateEvents.ResumeGameplay);
 		this.mainGuiStateMachine.AddTransition(GuiStates.GameplayPaused, GuiStates.Settings, null, null, null, null, GuiStateEvents.ShowSettingsPopup);
 		this.mainGuiStateMachine.AddTransition(GuiStates.GameplayHighScore, GuiStates.GameplayPostGame, null, null, null, null, GuiStateEvents.ShowEndGameScreen);
@@ -489,7 +501,7 @@ public class GuiManager : MonoBehaviour
 
 	private void GameplayHighScore_OnExit(StateMachine<GuiStates, GuiStateEvents> stateMachine)
 	{
-		// Do something?
+		this.gameManager.UpdateHighScore();
 	}
 
 	#endregion

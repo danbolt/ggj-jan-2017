@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	private int highScore;
+	private int highScore = 0;
 	private int playerScore = 0;
 	private bool isGameRunning;
 
@@ -22,6 +22,14 @@ public class GameManager : MonoBehaviour {
 		get 
 		{
 			return this.playerScore;
+		}
+	}
+
+	public bool BeatHighScore
+	{
+		get
+		{
+			return this.playerScore > this.highScore;
 		}
 	}
 
@@ -66,6 +74,11 @@ public class GameManager : MonoBehaviour {
 	public void UnPause()
 	{
 		Time.timeScale = 1.0f;
+	}
+
+	public void UpdateHighScore()
+	{
+		this.highScore = this.playerScore;
 	}
 
 }
