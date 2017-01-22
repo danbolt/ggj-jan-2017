@@ -15,13 +15,16 @@ public class PlayerJump : MonoBehaviour
 	private AudioSource _AudioSource;
 	private System.Random _Random = new System.Random();
 	private int LastUsedSoundIndex = -1;
+    private Animator _Animator;
 
-	private void Start()
+    private void Start()
 	{
 		_Rigidbody = GetComponent<Rigidbody>();
 		_Collider = GetComponent<CapsuleCollider>();
 		_AudioSource = GetComponent<AudioSource>();
-	}
+
+        _Animator = GetComponent<Animator>();
+    }
 
 	private void FixedUpdate()
 	{
@@ -34,7 +37,9 @@ public class PlayerJump : MonoBehaviour
 			Jump();
 			PlayJumpSound();
 		}
-	}
+
+        _Animator.SetBool("jumping", !IsGrounded);
+    }
 
 	private bool IsGrounded
 	{
