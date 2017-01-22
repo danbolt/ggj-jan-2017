@@ -13,7 +13,6 @@ public class PlayerJump : MonoBehaviour
 	private Rigidbody _Rigidbody;
 	private CapsuleCollider _Collider;
 	private AudioSource _AudioSource;
-	private float ColliderHeight;
 	private System.Random _Random = new System.Random();
 	private int LastUsedSoundIndex = -1;
 
@@ -22,17 +21,15 @@ public class PlayerJump : MonoBehaviour
 		_Rigidbody = GetComponent<Rigidbody>();
 		_Collider = GetComponent<CapsuleCollider>();
 		_AudioSource = GetComponent<AudioSource>();
-		ColliderHeight = _Collider.bounds.extents.y;
 	}
 
 	private void FixedUpdate()
 	{
-		if (!IsGrounded)
-		{
-			// kludge to account for the weird gravity scale
-			_Rigidbody.velocity = _Rigidbody.velocity + ExtraDrag * Time.deltaTime;
-		}
-		else if (Input.GetButtonDown(Button) || Input.GetButtonDown(Button2))
+		// kludge to account for the weird gravity scale
+		_Rigidbody.velocity = _Rigidbody.velocity + ExtraDrag * Time.deltaTime;
+
+		bool jumpButtonPressed = Input.GetButtonDown(Button) || Input.GetButtonDown(Button2);
+		if (jumpButtonPressed && IsGrounded)
 		{
 			Jump();
 			PlayJumpSound();
@@ -43,8 +40,19 @@ public class PlayerJump : MonoBehaviour
 	{
 		get
 		{
-			//Physics.CheckCapsule(collider.bounds.center,new Vector3(collider.bounds.center.x,collider.bounds.min.y-0.1f,collider.bounds.center.z),0.18f));
-			return Physics.Raycast(transform.position, -Vector3.up, ColliderHeight + 0.02f);
+			return Physics.Raycast(transform.position, -Vector3.up, _Collider.bounds.extents.y - 0.02f);
+
+			// var colliderStart = _Collider.bounds.center;
+			// var colliderEnd = new Vector3(_Collider.bounds.center.x, _Collider.bounds.min.y - 0.1f, _Collider.bounds.center.z);
+			// int allLayers = -1;
+
+			// bool result = Physics.CheckCapsule(
+			// 	colliderStart,
+			// 	colliderEnd,
+			// 	_Collider.radius,
+			// 	allLayers,
+			// 	QueryTriggerInteraction.Ignore);
+			// return result;
 		}
 	}
 
