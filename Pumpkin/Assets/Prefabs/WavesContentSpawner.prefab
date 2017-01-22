@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca43e0715f9c1bf40a3297c294956d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Wave: {fileID: 0}
 --- !u!114 &114745563162952826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63,3 +64,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ed5abe3d6e57c4298ea0dc70d4a323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentIndex: 0
