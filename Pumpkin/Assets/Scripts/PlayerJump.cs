@@ -32,7 +32,7 @@ public class PlayerJump : MonoBehaviour
 	{
          inAir = !IsGrounded;
 
-        if (Input.GetButtonDown(Button) && !inAir)
+        if ((Input.GetButtonDown(Button) || Input.GetButtonDown("Fire2")) && !inAir)
 		{
 			Jump();
 			PlayJumpSound();
