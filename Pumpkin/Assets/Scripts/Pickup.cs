@@ -3,27 +3,18 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    #pragma warning disable 0414
-	private BoxCollider _Collider;
-    #pragma warning restore 0414
+	public string ActorName = "Player";
 
-	private GameManager gameManager;
-
-	private void Start()
+	private void OnTriggerEnter(Collider otherCollider)
 	{
-        #pragma warning disable 0414
-		_Collider = GetComponent<BoxCollider>();
-        #pragma warning restore 0414
+		if (otherCollider.gameObject.name == ActorName)
+		{
+			if (GameManager.Instance)
+			{
+				GameManager.Instance.IncreaseScore();
+			}
 
-		this.gameManager = GameManager.Instance;
-	}
-
-	private void OnTriggerEnter(Collider c)
-	{
-        if (c.gameObject.name == "Player")
-        {
-			this.gameManager.IncreaseScore();
-            gameObject.SetActive(false);
-        }
+			gameObject.SetActive(false);
+		}
 	}
 }
