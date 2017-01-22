@@ -5,7 +5,7 @@ using UnityEngine;
 public class WavesSpawnData : MonoBehaviour {
 
     private WaveResultDef def;
-    private int currentIndex;
+    public int currentIndex = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +14,6 @@ public class WavesSpawnData : MonoBehaviour {
         TextAsset targetFile = Resources.Load<TextAsset>(filePath);
 
         def = Newtonsoft.Json.JsonConvert.DeserializeObject<WaveResultDef>(targetFile.text);
-
-        currentIndex = 0;
     }
 
     public WaveDef GetNextWave()
@@ -26,7 +24,11 @@ public class WavesSpawnData : MonoBehaviour {
             currentIndex++;
             return result;
         }
-
-        return null;
+        else
+        {
+            // Return a random wave from the end
+            int randomIndex = (Random.Range(def.waves.Count - 3, def.waves.Count)) - 1;
+            return def.waves[randomIndex];
+        }
     }
 }
