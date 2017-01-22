@@ -99,7 +99,7 @@ public class WavesSpawner : MonoBehaviour {
                 {
                     GameObject foundObject = Resources.Load(spawnInstruction.objectToSpawn) as GameObject;
                     GameObject targetObject = Instantiate(foundObject, spawnPoints[spawnInstruction.spawnPoint].transform.position, new Quaternion());
-
+                    targetObject.transform.parent = spawnPoints[spawnInstruction.spawnPoint].transform.parent;
                     currentSpawns.Add(targetObject);
                 }
                 else
@@ -108,6 +108,7 @@ public class WavesSpawner : MonoBehaviour {
                     {
                         GameObject foundObject = Resources.Load("Shooter") as GameObject;
                         GameObject targetObject = Instantiate(foundObject, spawnPoints[spawnInstruction.spawnPoint].transform.position, new Quaternion());
+                        targetObject.transform.parent = spawnPoints[spawnInstruction.spawnPoint].transform.parent;
                         targetObject.GetComponent<BalisticShooter>().SetInstruction(spawnInstruction);
 
                         currentSpawns.Add(targetObject);
@@ -116,10 +117,7 @@ public class WavesSpawner : MonoBehaviour {
             }
 
             // Boat rocking
-            if (waveDef.boatRockingSpeed != 0 && waveDef.boatMaxAngle != 0)
-            {
-                _Boat.SetRocking(waveDef);
-            }
+            _Boat.SetRocking(waveDef);
         }
     }
 }

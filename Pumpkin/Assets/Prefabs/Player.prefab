@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114934501716912184}
   - component: {fileID: 82590004336799808}
   - component: {fileID: 114977919697387478}
+  - component: {fileID: 95683654420332008}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -295,7 +296,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4514282705713148}
-  - component: {fileID: 95241512280047710}
   m_Layer: 0
   m_Name: SurferGuy
   m_TagString: Untagged
@@ -1295,7 +1295,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1037694407204196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6652932, y: 0.17, z: -4.046815}
+  m_LocalPosition: {x: -6.21, y: 18.31, z: -4.046815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4514282705713148}
@@ -1771,17 +1771,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &95241512280047710
+--- !u!95 &95683654420332008
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1377268337585116}
+  m_GameObject: {fileID: 1037694407204196}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f21390a7b0acf6f45b84e310c7f75c97, type: 3}
   m_Controller: {fileID: 9100000, guid: b619067f1e668394e8622a373744f1d5, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -1799,8 +1799,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c62e4a5de77464baadd60ad86b3abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: {x: 0, y: 20, z: 0}
+  Force: {x: 0, y: 24, z: 0}
+  ExtraDrag: {x: 0, y: -20.8, z: 0}
   Button: Jump
+  Button2: Fire2
   JumpSounds:
   - {fileID: 8300000, guid: 93ff0df364be14f4fabcd3cf806e3360, type: 3}
   - {fileID: 8300000, guid: 2f6ff40bc62d13045af4d6d10cb147ea, type: 3}

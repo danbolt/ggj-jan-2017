@@ -32,7 +32,7 @@ public class RockTheBoatTest : MonoBehaviour {
                 }
                 else
                 {
-                    dirction = "Down";
+                     dirction = "Down";
                 }
             }
             if (dirction == "Down")

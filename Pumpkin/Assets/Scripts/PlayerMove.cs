@@ -15,6 +15,8 @@ public class PlayerMove : MonoBehaviour
 	private Rigidbody _Rigidbody;
 	#pragma warning restore 0414
 
+    private Animator _Animator;
+
 	private Vector3 _OldMoveDirection = new Vector3(1f, 0f, 0f);
 
 	private void Start()
@@ -22,6 +24,8 @@ public class PlayerMove : MonoBehaviour
 		#pragma warning disable 0414
 		_Rigidbody = GetComponent<Rigidbody>();
 		#pragma warning restore 0414
+
+        _Animator  = GetComponent<Animator>();
 	}
 
 	private void FixedUpdate()
@@ -39,6 +43,11 @@ public class PlayerMove : MonoBehaviour
 			ModelTransform.forward = _OldMoveDirection;
 		}
 	}
+
+    private void Update()
+    {
+        _Animator.SetBool("running", Mathf.Abs(MoveDirection.x) > 0.001f);
+    }
 
 	private Vector3 MoveDirection
 	{
