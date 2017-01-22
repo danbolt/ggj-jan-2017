@@ -283,8 +283,8 @@ public class GuiManager : MonoBehaviour
 		}
 
 		this.gameManager.ResetTime();
-
-		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
+        this.gameManager.ResetScore();
+        this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
 	}
 
 	public void ShowCredits()

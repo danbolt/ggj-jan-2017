@@ -109,7 +109,4 @@ public class GameManager : MonoBehaviour {
 	{
 		this.elapsedTime = 0.0f;
 	}
-
-
-
 }
