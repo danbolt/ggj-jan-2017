@@ -45,19 +45,19 @@ public class PlayerJump : MonoBehaviour
 	{
 		get
 		{
-			return Physics.Raycast(transform.position, -Vector3.up, _Collider.bounds.extents.y - 0.02f);
+			//return Physics.Raycast(transform.position, -Vector3.up, _Collider.bounds.extents.y - 0.02f);
 
-			// var colliderStart = _Collider.bounds.center;
-			// var colliderEnd = new Vector3(_Collider.bounds.center.x, _Collider.bounds.min.y - 0.1f, _Collider.bounds.center.z);
-			// int allLayers = -1;
+			 var colliderStart = _Collider.bounds.center;
+			 var colliderEnd = new Vector3(_Collider.bounds.center.x, _Collider.bounds.min.y - 0.1f, _Collider.bounds.center.z);
+			 int platformLayer = 1 << 8;
 
-			// bool result = Physics.CheckCapsule(
-			// 	colliderStart,
-			// 	colliderEnd,
-			// 	_Collider.radius,
-			// 	allLayers,
-			// 	QueryTriggerInteraction.Ignore);
-			// return result;
+			 bool result = Physics.CheckCapsule(
+			 	colliderStart,
+			 	colliderEnd,
+			 	_Collider.radius,
+                 platformLayer,
+				QueryTriggerInteraction.Ignore);
+			return result;
 		}
 	}
 

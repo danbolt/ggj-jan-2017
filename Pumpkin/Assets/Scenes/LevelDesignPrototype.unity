@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 47366329}
   - component: {fileID: 47366330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BoatAndSpawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 57781964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (15)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 159050593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (2)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -368,6 +368,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 65d688016db5b8a40ba18f404de75d6d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 65d688016db5b8a40ba18f404de75d6d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65d688016db5b8a40ba18f404de75d6d, type: 3}
   m_IsPrefabParent: 0
@@ -422,6 +430,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
   m_IsPrefabParent: 0
@@ -433,7 +449,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 377426548}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (23)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -461,7 +477,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 396364920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (20)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -493,7 +509,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 466664047}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (1)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -539,7 +555,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 580738631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (21)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -567,7 +583,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 601182913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (29)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -595,7 +611,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 606358411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BarrelSpawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +643,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 621514084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (7)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -655,7 +671,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 713428940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlatformsAndSpawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,6 +803,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
   m_IsPrefabParent: 0
@@ -844,6 +868,14 @@ Prefab:
     - target: {fileID: 400002, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
@@ -903,7 +935,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 906597850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (18)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -931,7 +963,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 940039920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CoinSpawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,7 +1002,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 975953751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (5)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1014,7 +1046,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1065374587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (28)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1042,7 +1074,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1132818726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (11)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1074,7 +1106,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1249149836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (27)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1102,7 +1134,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1267764882}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (22)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1130,7 +1162,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1301060010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (12)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1158,7 +1190,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1307558307}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (8)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1226,7 +1258,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1390121738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1291,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1417757403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1333,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1486039097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (10)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1337,7 +1369,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1678204251}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (9)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1365,7 +1397,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1687728915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (6)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1393,7 +1425,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1746314370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (26)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1421,7 +1453,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1769667111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (16)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1571,6 +1603,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
   m_IsPrefabParent: 0
@@ -1582,7 +1622,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1939469879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (13)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1610,7 +1650,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2032944162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (14)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1638,7 +1678,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2040686715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (19)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1713,7 +1753,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2125365809}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (17)
   m_TagString: SpawnPoints
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1779,6 +1819,14 @@ Prefab:
     - target: {fileID: 400002, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe65d1cbb79abbb4c92eb8534e74c227, type: 3}
