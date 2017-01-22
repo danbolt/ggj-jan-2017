@@ -1799,7 +1799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c62e4a5de77464baadd60ad86b3abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: {x: 0, y: 20, z: 0}
+  Force: {x: 0, y: 24, z: 0}
   ExtraDrag: {x: 0, y: -20.8, z: 0}
   Button: Jump
   Button2: Fire2
