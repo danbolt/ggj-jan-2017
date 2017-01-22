@@ -14,8 +14,11 @@ public class Pickup : MonoBehaviour
         #pragma warning restore 0414
 	}
 
-	private void OnTriggerEnter()
+	private void OnTriggerEnter(Collider c)
 	{
-		gameObject.SetActive(false);
+        if (c.gameObject.name == "Player")
+        {
+            gameObject.SetActive(false);
+        }
 	}
 }
