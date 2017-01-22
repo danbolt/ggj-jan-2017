@@ -7,15 +7,21 @@ public class Pickup : MonoBehaviour
 	private BoxCollider _Collider;
     #pragma warning restore 0414
 
+	private GameManager gameManager;
+
 	private void Start()
 	{
         #pragma warning disable 0414
 		_Collider = GetComponent<BoxCollider>();
         #pragma warning restore 0414
+
+		this.gameManager = GameManager.Instance;
 	}
 
 	private void OnTriggerEnter(Collider c)
 	{
+		this.gameManager.IncreaseScore();
+
         if (c.gameObject.name == "Player")
         {
             gameObject.SetActive(false);

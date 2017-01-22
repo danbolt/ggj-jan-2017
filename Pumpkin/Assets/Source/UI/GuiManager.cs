@@ -403,9 +403,8 @@ public class GuiManager : MonoBehaviour
 	private void StartingGameplay_OnEnter(StateMachine<GuiStates, GuiStateEvents> stateMachine)
 	{
 		Destroy(this.currentGuiPanel);
-		//		this.currentGuiPanel = NGUITools.AddChild(this.guiGameObject, Resources.Load(GuiSystemPath + "HUD_Panel") as GameObject);
-		//
-		//		this.currentGuiPanel.name = "HUD";
+		this.currentGuiPanel = NGUITools.AddChild(this.guiGameObject, Resources.Load(GuiSystemPath + "HUD/HUD") as GameObject);
+		this.currentGuiPanel.name = "HUD";
 		this.gameTimePassed = 0.0f;
 
 		if (!this.isolatedGuiFlow)
@@ -422,7 +421,7 @@ public class GuiManager : MonoBehaviour
 	private void InitializeGameplayHUD(StateMachine<GuiStates, GuiStateEvents> stateMachine)
 	{
 		Destroy(this.currentGuiPanel);
-		this.currentGuiPanel = NGUITools.AddChild(this.guiGameObject, Resources.Load(GuiSystemPath + "HUD_Panel") as GameObject);
+		this.currentGuiPanel = NGUITools.AddChild(this.guiGameObject, Resources.Load(GuiSystemPath + "HUD/HUD") as GameObject);
 		this.currentGuiPanel.name = "HUD";
 	}
 

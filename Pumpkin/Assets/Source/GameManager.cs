@@ -16,7 +16,15 @@ public class GameManager : MonoBehaviour {
 			return instance;
 		}
 	}
-		
+
+	public int CurrentScore 
+	{
+		get 
+		{
+			return this.playerScore;
+		}
+	}
+
 	private void Awake() {
 		if (instance != null) 
 		{
