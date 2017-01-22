@@ -55,9 +55,9 @@ MonoBehaviour:
   mUVRect:
     serializedVersion: 2
     x: 0
-    y: -0.15185547
+    y: -0.30371094
     width: 0.5
-    height: 0.5
+    height: 1
   mFont:
     mSize: 100
     mBase: 80
