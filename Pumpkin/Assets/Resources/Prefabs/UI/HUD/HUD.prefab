@@ -639,6 +639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreLabel: {fileID: 114042010643657562}
+  highScoreLabel: {fileID: 114231309318209970}
+  timeLabel: {fileID: 114788452103685592}
 --- !u!114 &114330353926996472
 MonoBehaviour:
   m_ObjectHideFlags: 1

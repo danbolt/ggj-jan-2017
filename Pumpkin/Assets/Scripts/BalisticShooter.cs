@@ -55,6 +55,9 @@ public class BalisticShooter : MonoBehaviour
 
         spawns.Add(spawned);
 
-        SoundManager.Instance.PlayBarrelShotSound(sfxSource);
+		if (SoundManager.Instance)
+		{
+			SoundManager.Instance.PlayBarrelShotSound(sfxSource);
+		}
     }
 }

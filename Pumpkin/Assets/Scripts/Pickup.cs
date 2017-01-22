@@ -9,7 +9,10 @@ public class Pickup : MonoBehaviour
 	{
 		if (otherCollider.gameObject.name == ActorName)
 		{
-            SoundManager.Instance.PlayCoinSound();
+			if (SoundManager.Instance)
+			{
+				SoundManager.Instance.PlayCoinSound();
+			}
 
             if (GameManager.Instance)
 			{
