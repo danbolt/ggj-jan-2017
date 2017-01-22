@@ -196,6 +196,7 @@ public class GuiManager : MonoBehaviour
 		if (this.mainGuiStateMachine.GetState() == GuiStates.Gameplay)
 		{
 			this.mainGuiStateMachine.HandleEvent(GuiStateEvents.PauseGameplay);
+			this.gameManager.Pause();
 		}
 	}
 
@@ -224,6 +225,7 @@ public class GuiManager : MonoBehaviour
 		if (!this.isolatedGuiFlow)
 		{
 			// Trigger Gameplay resume hook here.
+			this.gameManager.UnPause();
 		}
 	}
 
@@ -424,6 +426,8 @@ public class GuiManager : MonoBehaviour
 		Destroy(this.currentGuiPanel);
 		this.currentGuiPanel = NGUITools.AddChild(this.guiGameObject, Resources.Load(GuiSystemPath + "HUD/HUD") as GameObject);
 		this.currentGuiPanel.name = "HUD";
+
+		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ResumeGameplay);
 	}
 
 	private void Gameplay_Update(StateMachine<GuiStates, GuiStateEvents> stateMachine)

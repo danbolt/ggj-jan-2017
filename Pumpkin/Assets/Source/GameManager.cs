@@ -60,7 +60,6 @@ public class GameManager : MonoBehaviour {
 
 	public void Pause()
 	{
-		Debug.Log("Set Game To Paused");
 		Time.timeScale = 0.0f;
 	}
 
