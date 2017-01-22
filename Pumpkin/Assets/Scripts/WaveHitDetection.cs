@@ -5,11 +5,14 @@ public class WaveHitDetection : MonoBehaviour
 {
 	public GameObject Player;
 
-	private void OnTriggerEnter()
+	private void OnTriggerEnter(Collider other)
 	{
 		if (Player)
 		{
-			Player.SendMessage("OnHitByWave", null, SendMessageOptions.RequireReceiver);
+			if (other.gameObject == Player)
+			{
+				Player.SendMessage("OnHitByWave", null, SendMessageOptions.RequireReceiver);
+			}
 		}
 		else
 		{

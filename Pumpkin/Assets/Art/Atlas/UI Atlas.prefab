@@ -495,7 +495,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  mPixelSize: 1
+  mPixelSize: 0.25
   mReplacement: {fileID: 0}
   mCoordinates: 0
   sprites: []
