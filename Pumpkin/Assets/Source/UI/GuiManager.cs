@@ -35,6 +35,9 @@ public class GuiManager : MonoBehaviour
 	[SerializeField]
 	private bool isolatedGuiFlow = false;
 
+	[SerializeField]
+	private GameManager gameManager;
+
 	private StateMachine<GuiStates, GuiStateEvents> mainGuiStateMachine;
 
 	[SerializeField]
@@ -263,6 +266,11 @@ public class GuiManager : MonoBehaviour
 	/// <summary>The end game.</summary>
 	public void EndGame()
 	{
+		if (!this.isolatedGuiFlow)
+		{
+			this.gameManager.Pause();
+		}
+
 		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.ShowEndGameScreen);
 	}
 
@@ -403,11 +411,11 @@ public class GuiManager : MonoBehaviour
 		if (!this.isolatedGuiFlow)
 		{
 			// Add hook to start the gameplay loop here.
+			SceneManager.LoadScene("LevelDesignPrototype");
 		}
 
-		// Trigger the gameplay to start immediately.
 		this.TriggerGameplayStart();
-		SceneManager.LoadScene("LevelDesignPrototype");
+		// Trigger the gameplay to start immediately.
 		this.mainGuiStateMachine.HandleEvent(GuiStateEvents.EnterGameplay);
 	}
 

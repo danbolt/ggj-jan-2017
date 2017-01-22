@@ -49,4 +49,16 @@ public class GameManager : MonoBehaviour {
 	{
 		this.playerScore = 0;
 	}
+
+	public void Pause()
+	{
+		Debug.Log("Set Game To Paused");
+		Time.timeScale = 0.0f;
+	}
+
+	public void UnPause()
+	{
+		Time.timeScale = 1.0f;
+	}
+
 }
