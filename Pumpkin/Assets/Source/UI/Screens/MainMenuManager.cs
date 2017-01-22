@@ -9,10 +9,13 @@ public class MainMenuManager : MonoBehaviour {
 	void Start () {
 		uiManagerInstance = GuiManager.Instance;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+    // Update is called once per frame
+    void Update() {
+        if (Input.GetButton("Fire1"))
+        {
+            this.OnStartGameClicked();
+        }
 	}
 
 	public void OnStartGameClicked()

@@ -164,7 +164,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1477283797192838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -100, z: 0}
+  m_LocalPosition: {x: -23, y: -30, z: 0}
   m_LocalScale: {x: 1.0016022, y: 1, z: 1.0016026}
   m_Children: []
   m_Father: {fileID: 4790722905805292}
@@ -177,7 +177,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1435114688238654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -621, y: 1, z: 0}
+  m_LocalPosition: {x: -333, y: 1, z: 0}
   m_LocalScale: {x: 0.9984003, y: 0.9984003, z: 0.99839985}
   m_Children: []
   m_Father: {fileID: 4532973861003714}
@@ -207,7 +207,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1811365940623202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80, y: -251, z: 0}
+  m_LocalPosition: {x: 80, y: -89, z: 0}
   m_LocalScale: {x: 1.0035254, y: 1.00192, z: 1.0035257}
   m_Children: []
   m_Father: {fileID: 4790722905805292}
@@ -236,7 +236,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1412789636079318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 15, z: 0}
+  m_LocalPosition: {x: 20, y: 36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4532973861003714}
@@ -249,7 +249,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1159961778413290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 636, y: 1, z: 0}
+  m_LocalPosition: {x: 348, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4532973861003714}
@@ -319,7 +319,7 @@ MonoBehaviour:
   aspectRatio: 4
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
-  mFont: {fileID: 114539454621048630, guid: 7d75ed8ff33bd42ceabf637b75ccb578, type: 2}
+  mFont: {fileID: 114674380535215358, guid: 67aa2811ee85e694c9a815afbe1b2c4a, type: 2}
   mText: Credits
   mFontSize: 60
   mFontStyle: 0
@@ -377,14 +377,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1215
-  mHeight: 758
+  mWidth: 639
+  mHeight: 434
   mDepth: -10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.6036745
+  aspectRatio: 1.6029024
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -463,19 +463,19 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 4790722905805292}
     relative: 0.5
-    absolute: -144
+    absolute: -167
   rightAnchor:
     target: {fileID: 4790722905805292}
     relative: 0.5
-    absolute: 144
+    absolute: 121
   bottomAnchor:
     target: {fileID: 4790722905805292}
     relative: 0
-    absolute: 243
+    absolute: 151
   topAnchor:
     target: {fileID: 4790722905805292}
     relative: 0
-    absolute: 315
+    absolute: 223
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
@@ -489,7 +489,7 @@ MonoBehaviour:
   aspectRatio: 4
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
-  mFont: {fileID: 114539454621048630, guid: 7d75ed8ff33bd42ceabf637b75ccb578, type: 2}
+  mFont: {fileID: 114674380535215358, guid: 67aa2811ee85e694c9a815afbe1b2c4a, type: 2}
   mText: Start New Game
   mFontSize: 100
   mFontStyle: 0
@@ -531,33 +531,33 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 4790722905805292}
     relative: 0
-    absolute: 35
+    absolute: 50
   rightAnchor:
     target: {fileID: 4790722905805292}
     relative: 1
-    absolute: -105
+    absolute: -90
   bottomAnchor:
     target: {fileID: 4790722905805292}
     relative: 0
-    absolute: 145
+    absolute: 167
   topAnchor:
     target: {fileID: 4790722905805292}
     relative: 1
-    absolute: -118
+    absolute: -96
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 1073
-  mHeight: 495
+  mWidth: 498
+  mHeight: 171
   mDepth: 0
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.1643286
+  aspectRatio: 2.7821229
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
-  mFont: {fileID: 114539454621048630, guid: 7d75ed8ff33bd42ceabf637b75ccb578, type: 2}
+  mFont: {fileID: 114674380535215358, guid: 67aa2811ee85e694c9a815afbe1b2c4a, type: 2}
   mText: Chad and the Big Surf
   mFontSize: 125
   mFontStyle: 0
@@ -681,13 +681,13 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 209
-  mHeight: 796
+  mHeight: 472
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 0.26125
+  aspectRatio: 0.2625628
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -793,13 +793,13 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 209
-  mHeight: 796
+  mHeight: 472
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 0.26125
+  aspectRatio: 0.2625628
   mType: 0
   mFillDirection: 4
   mFillAmount: 1

@@ -55,7 +55,7 @@ MonoBehaviour:
   mSprites:
   - name: Button_Dark (1)
     x: 0
-    y: 92
+    y: 244
     width: 96
     height: 94
     borderLeft: 20
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: caligraf-1435
-    x: 0
-    y: 311
+    x: 1023
+    y: 1335
     width: 1023
     height: 713
     borderLeft: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 311
   - name: map
-    x: 1024
-    y: 439
+    x: 0
+    y: 704
     width: 421
     height: 585
     borderLeft: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: roll
-    x: 0
-    y: 187
+    x: 787
+    y: 1166
     width: 488
     height: 123
     borderLeft: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: roll_bg
-    x: 1024
-    y: 74
+    x: 0
+    y: 339
     width: 404
     height: 364
     borderLeft: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: roll_bg_vertical
-    x: 1446
-    y: 620
+    x: 422
+    y: 885
     width: 364
     height: 404
     borderLeft: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: roll_vertical
-    x: 1446
-    y: 131
+    x: 422
+    y: 396
     width: 123
     height: 488
     borderLeft: 0
@@ -144,6 +144,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: seasideresort_0
+    x: 0
+    y: 1290
+    width: 1022
+    height: 758
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 2
+    paddingTop: 0
+    paddingBottom: 266
   mPixelSize: 0.25
   mReplacement: {fileID: 0}
   mCoordinates: 0

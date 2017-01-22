@@ -29,22 +29,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1144740712019248
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4103967656394898}
-  - component: {fileID: 114939782900927940}
-  m_Layer: 5
-  m_Name: lbl_Title
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &1303893475304476
 GameObject:
   m_ObjectHideFlags: 1
@@ -155,19 +139,6 @@ Transform:
   m_Father: {fileID: 4190526877648360}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4103967656394898
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1144740712019248}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 14, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4107977687431502}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4107977687431502
 Transform:
   m_ObjectHideFlags: 1
@@ -175,10 +146,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608591180093894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4103967656394898}
   - {fileID: 4550300915481838}
   - {fileID: 4941497933841854}
   - {fileID: 4190526877648360}
@@ -192,14 +162,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1683100115812160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 1, z: 0}
+  m_LocalPosition: {x: 37, y: -6, z: 0}
   m_LocalScale: {x: 0.9984003, y: 1, z: 0.99839985}
   m_Children:
   - {fileID: 4439722163215592}
   - {fileID: 4051397562572258}
   - {fileID: 4212997849141368}
   m_Father: {fileID: 4107977687431502}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4212997849141368
 Transform:
@@ -208,7 +178,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303893475304476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -30, z: 0}
+  m_LocalPosition: {x: -18, y: 26, z: 0}
   m_LocalScale: {x: 1.0060093, y: 1.0044, z: 1.0060098}
   m_Children: []
   m_Father: {fileID: 4190526877648360}
@@ -221,7 +191,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099010611857094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43, y: -309, z: 0}
+  m_LocalPosition: {x: -18, y: -241, z: 0}
   m_LocalScale: {x: 1.0035254, y: 1.00192, z: 1.0035257}
   m_Children: []
   m_Father: {fileID: 4190526877648360}
@@ -234,11 +204,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1919245903312732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 815, y: 1, z: 0}
+  m_LocalPosition: {x: 493, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4107977687431502}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4941497933841854
 Transform:
@@ -247,11 +217,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1597889161503164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -800, y: 1, z: 0}
+  m_LocalPosition: {x: -484, y: -6, z: 0}
   m_LocalScale: {x: 0.9984003, y: 0.9984003, z: 0.99839985}
   m_Children: []
   m_Father: {fileID: 4107977687431502}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &65626656295599058
 BoxCollider:
@@ -296,13 +266,13 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 209
-  mHeight: 998
+  mHeight: 638
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 0.20941883
+  aspectRatio: 0.44279662
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -350,13 +320,13 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 209
-  mHeight: 998
+  mHeight: 638
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 0.20941883
+  aspectRatio: 0.44279662
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -387,33 +357,33 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 4190526877648360}
     relative: 0.5
-    absolute: -334
+    absolute: -331
   rightAnchor:
     target: {fileID: 4190526877648360}
     relative: 0.5
-    absolute: 346
+    absolute: 295
   bottomAnchor:
     target: {fileID: 4190526877648360}
     relative: 0
-    absolute: 267
+    absolute: 166
   topAnchor:
     target: {fileID: 4190526877648360}
     relative: 0
-    absolute: 633
+    absolute: 486
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 680
-  mHeight: 366
+  mWidth: 626
+  mHeight: 320
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.8579235
+  aspectRatio: 1.95625
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
-  mFont: {fileID: 114539454621048630, guid: 7d75ed8ff33bd42ceabf637b75ccb578, type: 2}
+  mFont: {fileID: 114674380535215358, guid: 67aa2811ee85e694c9a815afbe1b2c4a, type: 2}
   mText: "Development: \nJason Esty, Alon Mizrahi, Daniel Savage, Luis Placid.\nArt:\nErika
     Moya, Luis Placid\nSound:\nAlon Mizrahi, Daniel Savage "
   mFontSize: 60
@@ -472,14 +442,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1574
-  mHeight: 960
+  mWidth: 934
+  mHeight: 600
   mDepth: -10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.1395833
+  aspectRatio: 1.4723502
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -521,19 +491,19 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 4190526877648360}
     relative: 0.5
-    absolute: -135
+    absolute: -110
   rightAnchor:
     target: {fileID: 4190526877648360}
     relative: 0.5
-    absolute: 49
+    absolute: 74
   bottomAnchor:
     target: {fileID: 4190526877648360}
     relative: 0
-    absolute: 148
+    absolute: 36
   topAnchor:
     target: {fileID: 4190526877648360}
     relative: 0
-    absolute: 194
+    absolute: 82
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
@@ -547,7 +517,7 @@ MonoBehaviour:
   aspectRatio: 4
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
-  mFont: {fileID: 114539454621048630, guid: 7d75ed8ff33bd42ceabf637b75ccb578, type: 2}
+  mFont: {fileID: 114674380535215358, guid: 67aa2811ee85e694c9a815afbe1b2c4a, type: 2}
   mText: Go Back
   mFontSize: 60
   mFontStyle: 0
@@ -706,71 +676,3 @@ MonoBehaviour:
   mSortingOrder: 0
   mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
---- !u!114 &114939782900927940
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1144740712019248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftAnchor:
-    target: {fileID: 4190526877648360}
-    relative: 0
-    absolute: 35
-  rightAnchor:
-    target: {fileID: 4190526877648360}
-    relative: 1
-    absolute: -105
-  bottomAnchor:
-    target: {fileID: 4190526877648360}
-    relative: 0
-    absolute: 145
-  topAnchor:
-    target: {fileID: 4190526877648360}
-    relative: 1
-    absolute: -118
-  updateAnchors: 1
-  mColor: {r: 0, g: 0, b: 0, a: 1}
-  mPivot: 4
-  mWidth: 1431
-  mHeight: 697
-  mDepth: 0
-  mMat: {fileID: 0}
-  autoResizeBoxCollider: 0
-  hideIfOffScreen: 0
-  keepAspectRatio: 0
-  aspectRatio: 2.1676767
-  keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 0}
-  mFont: {fileID: 114539454621048630, guid: 7d75ed8ff33bd42ceabf637b75ccb578, type: 2}
-  mText: Chad and the Big Surf
-  mFontSize: 125
-  mFontStyle: 0
-  mAlignment: 0
-  mEncoding: 1
-  mMaxLineCount: 1
-  mEffectStyle: 0
-  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
-  mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
-  mOverflow: 0
-  mApplyGradient: 0
-  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  mSpacingX: 0
-  mSpacingY: 0
-  mUseFloatSpacing: 0
-  mFloatSpacingX: 0
-  mFloatSpacingY: 0
-  mOverflowEllipsis: 0
-  mOverflowWidth: 0
-  mModifier: 0
-  mShrinkToFit: 0
-  mMaxLineWidth: 0
-  mMaxLineHeight: 0
-  mLineWidth: 0
-  mMultiline: 1
