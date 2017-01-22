@@ -12,6 +12,8 @@ public class WaveResultDef
 [Serializable]
 public class WaveDef
 {
+    public float boatRockingSpeed;
+    public float boatMaxAngle;
     public float time;
     public List<SpawnInstruction> content;
 }
