@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
-public class AnimateMaterialOffset : MonoBehaviour {
-
+public class AnimateMaterialOffset : MonoBehaviour
+{
     /// <summary>
     /// Reference to the mesh renderer to animate. Set this in the editor.
     /// </summary>

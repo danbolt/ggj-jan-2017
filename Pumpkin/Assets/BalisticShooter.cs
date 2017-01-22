@@ -1,23 +1,23 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BalisticShooter : MonoBehaviour
 {
-
     private SpawnInstruction instrucion;
     private int numberOfSpawns;
     private float delay;
     private List<GameObject> spawns;
     private GameObject spawnObject;
 
-    // Use this for initialization
-    void Start () {
+    void Start()
+    {
         spawns = new List<GameObject>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    void Update ()
+    {
         delay -= Time.deltaTime;
         if (delay < 0 && numberOfSpawns > 0)
         {
